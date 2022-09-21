@@ -110,9 +110,11 @@
             @include('frontend.partials.slider')
         @endif
 
+        @if(Request::is('/'))
         {{-- SEARCH BAR --}}
         @include('frontend.partials.search')
-        
+        @endif
+
         {{-- MAIN CONTENT --}}
             @yield('content')
 

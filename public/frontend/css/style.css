@@ -1,46 +1,17 @@
- 
-/* Css For Realshed */
+@font-face {
+  font-family: "JF Flat Regular";
+  src: url('../fonts/JF-Flat-regular.eot');
+  src: url('../fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+  url('../fonts/JF-Flat-regular.woff') format('woff'),
+  url('../fonts/JF-Flat-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-/************ TABLE OF CONTENTS ***************
-1. Fonts
-2. Reset
-3. Global
-4. Main Header/style-one/style-two
-5. Main Slider/style-one/style-two
-6. Intro Section
-7. Welcome Section
-9. Cta Section
-8. Research Fields
-10. Testimonial Section
-11. Researches Section
-12. Team Section
-14. Video
-15. Fact Counter
-16. News Section
-19. Clients Section
-20. Main Footer
-21. Footer Bottom
-22. Research Style Two
-23. Innovative Solution
-24. Discover Section
-25. Testimonial Section
-26. Chooseus Section
-27. News Style Two
-28. Page Title
-29. Research Page Section
-30. Research Details
-31. Professor Page Section
-32. Professor Details
-33. About Section
-34. Error Section
-35. Blog Page Section
-36. Blog Details
-37. Blog Sidebar
-38. Contact Section
-39. Google Map
-
-
-**********************************************/
+body {
+  font-family: "JF Flat Regular", Arial, sans-serif !important;
+ }
 
 
 
@@ -74,7 +45,7 @@ body {
   line-height:26px;
   font-weight:400;
   background:#ffffff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center top;
@@ -120,7 +91,7 @@ body {
 
 
 a{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   text-decoration:none;
   transition:all 500ms ease;
   -moz-transition:all 500ms ease;
@@ -135,7 +106,7 @@ a:hover{
 }
 
 input,button,select,textarea{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -172,7 +143,7 @@ textarea:focus{
 
 p{
   position: relative;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   color: #93959e;
   font-weight: 400;
   margin: 0px;
@@ -181,7 +152,7 @@ p{
 
 h1,h2,h3,h4,h5,h6{
   position:relative;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   font-weight: 400;
   color: #2d2929;
   margin: 0px;
@@ -251,7 +222,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .handle-preloader .animation-preloader .txt-loading .letters-loading{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   font-weight: 400;
   letter-spacing: 15px;
   display: inline-block;
@@ -366,7 +337,7 @@ img {
   vertical-align: middle;
   font-size: 17px;
   line-height: 25px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'JF Flat Regular', sans-serif;
   font-weight: 500;
   text-align: center;
   padding: 15.5px 34px;
