@@ -2,6 +2,8 @@
 
 @section('styles')
 
+<link href="{{asset('frontend/css/styles.css')}}" rel="stylesheet">
+
 @endsection
 
 @section('content')

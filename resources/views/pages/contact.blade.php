@@ -6,7 +6,65 @@
 
 @section('content')
 
-    <section class="section">
+<section class="page-title-two bg-color-1 centred">
+    <div class="pattern-layer">
+        <div class="pattern-1" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
+        <div class="pattern-2" style="background-image: url(frontend/images/shape/shape-10.png);"></div>
+    </div>
+    <div class="auto-container">
+        <div class="content-box clearfix">
+            <h1>تواصل معنا</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="index.html">الرئيسية</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="contact-section bg-color-1">
+    <div class="auto-container">
+        <div class="row align-items-center clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+                <div class="content-box">
+                    <div class="sec-title" style="text-align: center">
+                        <h5>التواصل</h5>
+                        <h2>تواصل معنا</h2>
+                    </div>
+                    <div class="form-inner">
+                        <form id="contact-us" action="" method="POST">
+                            @csrf
+                            @auth
+                            <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                            @endauth
+
+                            <input type="hidden" name="mailto" value="{{ $contactsettings[0]['email'] ?? 'p4alam@gmail.com' }}">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    
+                                    <input type="text" id="name" name="name" placeholder="الإسم" @auth value="{{ auth()->user()->name }}" readonly @endauth required="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input type="email" id="email" name="email" placeholder="البريد الإلكتروني"  @auth value="{{ auth()->user()->email }}" readonly @endauth required="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input type="text" id="phone" name="phone" placeholder="رقم الهاتف" required="">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                    <textarea id="message" name="message" placeholder="الرسالة"></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                    <button class="theme-btn btn-one" type="submit" id="msgsubmitbtn" name="submit-form">إرسال</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    {{-- <section class="section">
         <div class="container">
             <div class="row">
 
@@ -102,7 +160,7 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
 @endsection
 
