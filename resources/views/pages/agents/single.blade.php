@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('styles')
+<link href="{{asset('frontend/css/styles.css')}}" rel="stylesheet">
 
 @endsection
 
@@ -10,7 +11,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col s12 m8">
+                <div class="col s12 m8 mt-5">
 
                     <div class="card horizontal card-no-shadow m-b-60">
                         <div class="card-image agent-image">
@@ -84,7 +85,7 @@
                         <div>
                             <ul class="collection with-header m-t-0">
                                 <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">التواصل مع الوسيط</h5>
+                                    <h5 class="m-0 mt-5 mb-5 text-right ">التواصل مع الوسيط</h5>
                                 </li>
                                 <li class="collection agent-message">
                                     <form class="agent-message-box" action="" method="POST">
@@ -93,21 +94,20 @@
                                         <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                                             
                                         <div class="box">
-                                            <input type="text" name="name" placeholder="الإسم">
+                                            <input class="form-control" type="text" name="name" placeholder="الإسم">
                                         </div>
                                         <div class="box">
-                                            <input type="email" name="email" placeholder="البريد الإلكتروني">
+                                            <input class="form-control" type="email" name="email" placeholder="البريد الإلكتروني">
                                         </div>
                                         <div class="box">
-                                            <input type="number" name="phone" placeholder="رقم الهاتف">
+                                            <input class="form-control" type="number" name="phone" placeholder="رقم الهاتف">
                                         </div>
                                         <div class="box">
-                                            <textarea name="message" placeholder="الرسالة"></textarea>
+                                            <textarea class="form-control" name="message" placeholder="الرسالة"></textarea>
                                         </div>
-                                        <div class="box">
-                                            <button id="msgsubmitbtn" class="btn waves-effect waves-light w100 indigo" type="submit">
+                                        <div class="box mb-5">
+                                            <button class="form-control" id="msgsubmitbtn" class="btn waves-effect waves-light w100 indigo" type="submit">
                                                 إرسال
-                                                <i class="material-icons left">send</i>
                                             </button>
                                         </div>
                                     </form>

@@ -7,102 +7,100 @@
 @endsection
 
 @section('content')
-
-    <section class="section">
-        <div class="container">
-            
-            <div class="row">
-                <h4 class="section-heading">العقارات</h4>
+        <!--Page Title-->
+        <section class="page-title-two bg-color-1 centred">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
+                <div class="pattern-2" style="background-image: url(frontend/images/shape/shape-10.png);"></div>
             </div>
-
-            <div class="row">
-                <div class="city-categories">
-                    @foreach($cities as $city)
-                        <div class="col s12 m3">
-                            <a href="{{ route('property.city',$city->city_slug) }}">
-                                <div class="city-category">
-                                    <span>{{ $city->city }}</span>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
+            <div class="auto-container">
+                <div class="content-box clearfix">
+                    <h1>العقارات</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{{route('home')}}">الرئيسية</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="row">
-
-                @foreach($properties as $property)
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                    <span class="card-image-bg" style="background-image:url({{Storage::url('property/'.$property->image)}});"></span>
-                                @else
-                                    <span class="card-image-bg"><span>
-                                @endif
-                                @if($property->featured == 1)
-                                    <a class="btn-floating halfway-fab waves-effect waves-light indigo"><i class="small material-icons">star</i></a>
-                                @endif
-                            </div>
-                            <div class="card-content property-content">
-                                <a href="{{ route('property.show',$property->slug) }}">
-                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="{{ $property->title }}">{{ str_limit( $property->title, 18 ) }}</span>
-                                </a>
-
-                                <div class="address">
-                                    <i class="small material-icons left">place</i>
-                                    <span>{{ ucfirst($property->city) }}</span>
+        </section>
+        <!--End Page Title-->
+        <section class="property-page-section property-list">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="default-sidebar property-sidebar">
+                            <div class="filter-widget sidebar-widget">
+                                <div class="widget-title">
+                                    <h5 class="text-center font-weight-bold">قائمة المدن </h5>
                                 </div>
-                                <div class="address">
-                                    <i class="small material-icons left">language</i>
-                                    <span>{{ ucfirst($property->address) }}</span>
-                                </div>
+                                <form class="sidebar-search" action="{{ route('search')}}" method="GET">
+        
+                                <div class="widget-content pb-5">
 
-                                <div class="address">
-                                    <i class="small material-icons left">check_box</i>
-                                    <span>{{ ucfirst($property->type) }}</span>
+                                    @foreach($cities as $city)
+                                    <div class="buy-btn pull-right text-center"><a class="category" href="{{ route('property.city',$city->city_slug) }}"><h4 class="category">{{ $city->city }}</h4></a></div>
+                                    <hr>
+                                @endforeach
+            
                                 </div>
-                                <div class="address">
-                                    <i class="small material-icons left">check_box</i>
-                                    <span>For {{ ucfirst($property->purpose) }}</span>
-                                </div>
-
-                                <h5>
-                                    &dollar;{{ $property->price }}
-                                    <div class="right" id="propertyrating-{{$property->id}}"></div>
-                                </h5>                                
-                            </div>
-                            <div class="card-action property-action">
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    غرف النوم: <strong>{{ $property->bedroom}}</strong> 
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    دورات المياه: <strong>{{ $property->bathroom}}</strong> 
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    منطقة: <strong>{{ $property->area}}</strong> Square Feet
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">comment</i> 
-                                    <strong>{{ $property->comments_count}}</strong>
-                                </span>
                             </div>
                         </div>
                     </div>
-                @endforeach
+        
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="property-content-side">
+                            <div class="wrapper list">
+                                <div class="deals-list-content list-item">
+                                    @foreach($properties as $property)
+                                    <div class="deals-block-one">
+                                        <div class="inner-box">
+        
+                                            @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
+                                            <div class="image-box">
+                                                <figure class="image"><img class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></figure>
+                                                <div class="batch"><i class="icon-11"></i></div>
+                                            </div>
+                                            @else
+                                            <div class="image-box">
+                                                <figure class="image"><img src="frontend/images/resource/deals-3.jpg" alt=""></figure>
+                                                <div class="batch"><i class="icon-11"></i></div>
+                                            </div>
+        
+                                            @endif
+        
+        
+                                            <div class="lower-content">
+                                                <div class="title-text"><h4><a href="{{ route('property.show',$property->slug) }}">{{$property->title}}</a></h4></div>
+                                                <div class="price-box clearfix">
+                                                    <div class="price-info pull-left">
+                                                        <h6>{{ $property->type }} - {{ $property->purpose }}</h6>
+                                                        <h4>${{ $property->price }}</h4>
+                                                    </div>
+                                                    <div class="author-box pull-right">
+                                                            <span>{{ ucfirst($property->city) }} - {{ ucfirst($property->address) }}</span>
+                                                    </div>
+                                                </div>
+                                                <ul class="more-details clearfix">
+                                                    <li><i class="icon-14"></i>غرف نوم: <strong>{{ $property->bedroom}}</strong></li>
+                                                    <li><i class="icon-15"></i>دورات مياه: <strong>{{ $property->bathroom}}</strong></li>
+                                                    <li><i class="icon-16"></i>مساحة أرضية: <strong>{{ $property->area}}</strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+        
+                                </div>
+                            </div>
 
+                            <div class="pagination-wrapper">
+                                {{ $properties->links() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="m-t-30 m-b-60 center">
-                {{ $properties->links() }}
-            </div>
-
-        </div>
-    </section>
-
+        </section>
+        
 @endsection
 
 @section('scripts')
