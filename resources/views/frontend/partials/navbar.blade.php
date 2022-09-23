@@ -31,9 +31,9 @@
                                             <a href="{{ route('agents') }}"><span>الوسطاء</span></a>
                                         </li>
 
-                                        <li class="{{ Request::is('gallery') ? 'active' : '' }}">
+                                        {{-- <li class="{{ Request::is('gallery') ? 'active' : '' }}">
                                             <a href="{{ route('gallery') }}"><span>المعرض</span></a>
-                                        </li>
+                                        </li> --}}
 
                                         <li class="{{ Request::is('blog*') ? 'active' : '' }}">
                                             <a href="{{ route('blog') }}"><span>المدونة</span></a>

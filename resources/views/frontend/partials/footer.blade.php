@@ -32,9 +32,9 @@
                                             <a href="{{ route('agents') }}" class="grey-text text-lighten-3">الوكلاء</a>
                                         </li>
                     
-                                        <li class="uppercase {{ Request::is('gallery*') ? 'underline' : '' }}">
+                                        {{-- <li class="uppercase {{ Request::is('gallery*') ? 'underline' : '' }}">
                                             <a href="{{ route('gallery') }}" class="grey-text text-lighten-3">المعرض</a>
-                                        </li>
+                                        </li> --}}
                     
                                         <li class="uppercase {{ Request::is('blog*') ? 'underline' : '' }}">
                                             <a href="{{ route('blog') }}" class="grey-text text-lighten-3">المدونة</a>
