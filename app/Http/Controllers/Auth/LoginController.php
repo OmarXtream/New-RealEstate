@@ -47,11 +47,11 @@ class LoginController extends Controller
 
         } elseif ($user->hasRole('Agent')) {
 
-            $this->redirectTo = route('agent.dashboard');
+            $this->redirectTo = route('home');
 
         } elseif ($user->hasRole('User')) {
 
-            $this->redirectTo = route('user.dashboard');
+            $this->redirectTo = route('home');
         }
     }
 }

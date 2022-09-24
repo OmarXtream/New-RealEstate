@@ -51,11 +51,12 @@
                         <li class="dropdown"><a href="#!"><span>{{ ucfirst(Auth::user()->username) }}</span></a>
                             <ul>
                             @if(Auth::user()->role_id == 1)
-                                <li><a href="{{ route('admin.dashboard') }}">الملف الشخصي</a></li>
+                                <li><a href="{{ route('admin.dashboard') }}">لوحة التحكم</a></li>
                             @elseif(Auth::user()->role_id == 2)
-                                <li><a href="{{ route('agent.dashboard') }}">الملف الشخصي</a></li>
+                                <li><a href="{{ route('agent.properties.create') }}">إنشاء عقار</a></li>
+                                <li><a href="{{ route('agent.properties.index') }}">قائمة عقاراتي</a></li>
+
                             @elseif(Auth::user()->role_id == 3)
-                                <li><a href="{{ route('user.dashboard') }}">الملف الشخصي</a></li>
                             @endif
                             <li>
                             <a class="dropdownitem indigo-text" href="{{ route('logout') }}"

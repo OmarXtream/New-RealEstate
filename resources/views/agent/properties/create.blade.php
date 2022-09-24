@@ -6,63 +6,52 @@
 
 @section('content')
 
-    <section class="section">
+    <section class="section" dir="rtl" style="text-align: right">
         <div class="container">
-            <div class="row">
+            <div class="row" dir="rtl">
 
-                <div class="col s12 m3">
-                    <div class="agent-sidebar">
-                        @include('agent.sidebar')
-                    </div>
-                </div>
 
-                <div class="col s12 m9">
+                <div class="col s12 m9 mt-2 mb-5">
+                    <h4 class="agent-title text-center mt-5 mb-5">إنشاء عقار</h4>
+
                     <div class="agent-content">
-                        <h4 class="agent-title">CREATE PROPERTY</h4>
 
                         <form action="{{route('agent.properties.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="material-icons prefix">title</i>
-                                    <input id="title" name="title" type="text" class="validate" data-length="200">
-                                    <label for="title">Title</label>
+                                    <input id="title" name="title" type="text" class="form-control" data-length="200">
+                                    <label for="title">إسم العقار</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">monetization_on</i>
-                                    <input id="price" name="price" type="number" class="validate">
-                                    <label for="price">Price</label>
+                                    <input id="price" name="price" type="number" class="form-control">
+                                    <label for="price">السعر</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">business</i>
-                                    <input id="area" name="area" type="number" class="validate">
-                                    <label for="area">Floor Area</label>
+                                    <input id="area" name="area" type="number" class="form-control">
+                                    <label for="area">المساحة الارضية</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">airline_seat_flat</i>
-                                    <input id="bedroom" name="bedroom" type="number" class="validate">
-                                    <label for="bedroom">Bedroom</label>
+                                    <input id="bedroom" name="bedroom" type="number" class="form-control">
+                                    <label for="bedroom">غرف النوم</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">event_seat</i>
-                                    <input id="bathroom" name="bathroom" type="number" class="validate">
-                                    <label for="bathroom">Bathroom</label>
+                                    <input id="bathroom" name="bathroom" type="number" class="form-control">
+                                    <label for="bathroom">دورات المياه</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s4">
-                                    <i class="material-icons prefix">location_city</i>
-                                    <input id="city" name="city" type="text" class="validate">
-                                    <label for="city">City</label>
+                                    <input id="city" name="city" type="text" class="form-control">
+                                    <label for="city">المدينة</label>
                                 </div>
                                 <div class="input-field col s8">
-                                    <i class="material-icons prefix">account_balance</i>
                                     <textarea id="address" name="address" class="materialize-textarea"></textarea>
-                                    <label for="address">Address</label>
+                                    <label for="address">عنوان العقار</label>
                                 </div>
                             </div>
                             <div class="row">
@@ -70,130 +59,122 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" name="featured" class="filled-in" checked="checked" />
-                                            <span>Featured</span>
+                                            <span>مميز؟</span>
                                         </label>
                                     </p>
                                 </div>
                                 <div class="input-field col s9">
-                                    <i class="material-icons prefix">mode_edit</i>
                                     <textarea id="description" name="description" class="materialize-textarea"></textarea>
-                                    <label for="description">Description</label>
+                                    <label for="description">الوصف</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col s3">
-                                    <label class="label-custom" for="type">Property Type</label>
+                                    <label class="label-custom" for="type">الغرض</label>
                                     <p>
                                         <label>
                                             <input class="with-gap" name="type" value="house" type="radio"  />
-                                            <span>Sale</span>
+                                            <span>بيع</span>
                                         </label>
                                     <p>
                                     </p>
                                         <label>
                                             <input class="with-gap" name="type" value="apartment" type="radio"  />
-                                            <span>Rent</span>
+                                            <span>تأجير</span>
                                         </label>
                                     </p>
                                 </div>
                                 <div class="col s3">
-                                    <label class="label-custom" for="purpose">Property Purpose</label>
+                                    <label class="label-custom" for="purpose">النوع</label>
                                     <p>
                                         <label>
                                             <input class="with-gap" name="purpose" value="sale" type="radio"  />
-                                            <span>House</span>
+                                            <span>بيت</span>
                                         </label>
                                     <p>
                                     </p>
                                         <label>
                                             <input class="with-gap" name="purpose" value="rent" type="radio"  />
-                                            <span>Apartment</span>
+                                            <span>شقة</span>
                                         </label>
                                     </p>
                                 </div>
                                 <div class="input-field col s6">
                                     <select multiple name="features[]">
-                                        <option value="" disabled selected>Choose Features</option>
+                                        <option value="" disabled selected>اختيار خصائص</option>
                                         @foreach($features as $feature)
                                             <option value="{{ $feature->id }}">{{ $feature->name }}</option>
                                         @endforeach
                                     </select>
-                                    <label class="label-custom">Select Features</label>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mb-3">
                                 <div class="file-field input-field col s12">
                                     <div class="btn indigo">
-                                        <span>Featured Image</span>
+                                        <span>صورة مميزه</span>
                                         <input type="file" name="image">
                                     </div>
                                     <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text">
+                                        <input style="display:none" class="file-path form-control" type="text">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">map</i>
-                                    <input id="location_latitude" name="location_latitude" type="text" class="validate">
+                                    <input id="location_latitude" name="location_latitude" type="text" class="form-control">
                                     <label for="location_latitude">Latitude</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">map</i>
-                                    <input id="location_longitude" name="location_longitude" type="text" class="validate">
+                                    <input id="location_longitude" name="location_longitude" type="text" class="form-control">
                                     <label for="location_longitude">Longitude</label>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="material-icons prefix">voice_chat</i>
-                                    <input id="video" name="video" type="text" class="validate">
-                                    <label for="video">Youtube Link</label>
+                                    <input id="video" name="video" type="text" class="form-control">
+                                    <label for="video">رابط مقطع يوتيوب</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="file-field input-field col s12">
                                     <div class="btn indigo">
-                                        <span>Floor Plan</span>
+                                        <span>المساحة الارضية</span>
                                         <input type="file" name="floor_plan">
                                     </div>
                                     <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text">
+                                        <input class="file-path form-control" type="text">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="material-icons prefix">place</i>
                                     <textarea id="nearby" name="nearby" class="materialize-textarea"></textarea>
                                     <label for="nearby">Nearby</label>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="row">
                                 <div class="file-field input-field col s12">
                                     <div class="btn indigo">
-                                        <span>Upload Gallery Images</span>
+                                        <span>رفع صور للعقار</span>
                                         <input type="file" name="gallaryimage[]" multiple>
-                                        <span class="helper-text" data-error="wrong" data-success="right">Upload one or more images</span>
                                     </div>
                                     <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text" placeholder="Upload one or more images">
+                                        <input style="display:none" class="file-path form-control" type="text" placeholder="Upload one or more images">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col s12 m-t-30">
-                                    <button class="btn waves-effect waves-light btn-large indigo darken-4" type="submit">
-                                        Submit
-                                        <i class="material-icons right">send</i>
+                                    <button class="btn btn-success waves-effect waves-light btn-large indigo darken-4" type="submit">
+                                        رفع
                                     </button>
                                 </div>
                             </div>

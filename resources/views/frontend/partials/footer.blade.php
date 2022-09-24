@@ -70,7 +70,7 @@
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <figure class="footer-logo"><a href="index.html"><img src="frontend/images/footer-logo.png" alt=""></a></figure>
+                        <figure class="footer-logo"><a href="{{route('home')}}"><img src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
                         <div class="copyright pull-left">
                             @if(isset($footersettings[0]) && $footersettings[0]['footer'])
                             {{ $footersettings[0]['footer'] }}
