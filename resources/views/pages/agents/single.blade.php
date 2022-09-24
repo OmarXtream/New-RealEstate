@@ -50,23 +50,15 @@
 
                                 <div class="card-action property-action">
                                     <span class="btn-flat">
-                                        <i class="material-icons">check_box</i>
                                         أسره: <strong>{{ $property->bedroom}}</strong> 
                                     </span>
                                     <span class="btn-flat">
-                                        <i class="material-icons">check_box</i>
                                         دورات مياه: <strong>{{ $property->bathroom}}</strong> 
                                     </span>
                                     <span class="btn-flat">
-                                        <i class="material-icons">check_box</i>
                                         منطقة: <strong>{{ $property->area}}</strong> Sq Ft
                                     </span>
                                     
-                                    @if($property->featured == 1)
-                                        <span class="right featured-stars">
-                                            <i class="material-icons">stars</i>
-                                        </span>
-                                    @endif
                                 </div>
                             </div>
                         </div>

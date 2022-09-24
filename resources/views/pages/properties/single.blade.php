@@ -48,291 +48,152 @@
 @endsection
 
 @section('content')
+<section class="page-title-two bg-color-1 centred">
+    <div class="pattern-layer">
+        <div class="pattern-1" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
+        <div class="pattern-2" style="background-image: url(frontend/images/shape/shape-10.png);"></div>
+    </div>
+    <div class="auto-container">
+        <div class="content-box clearfix">
+            <h1>{{ $property->title }}</h1>
+        </div>
+    </div>
+</section>
 
     <!-- SINGLE PROPERTY SECTION -->
-
-    <section class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 m8">
-                    <div class="single-title">
-                        <h4 class="single-title">{{ $property->title }}</h4>
-                    </div>
-
-                    <div class="address m-b-30">
-                        <i class="small material-icons left">place</i>
-                        <span class="font-18">{{ $property->address }}</span>
-                    </div>
-
-                    <div>
+    <section class="property-details property-details-one">
+        <div class="auto-container">
+            <div class="top-details clearfix">
+                <div class="left-column pull-left clearfix">
+                    <h3>{{ $property->title }}</h3>
+                    <div class="author-info clearfix">
+                        <div class="author-box pull-left">
+                            <figure class="author-thumb"><img src="{{asset('frontend/images/feature/author-1.jpg')}}" alt=""></figure>
+                            <h6>{{ $property->address }} <i class="fa fa-location"></i></h6>
+                        </div>
                         @if($property->featured == 1)
-                            <a class="btn-floating btn-small disabled"><i class="material-icons">star</i></a>
+                        <ul class="rating clearfix pull-left">
+                            <li><i class="icon-39"></i></li>
+                        </ul>
                         @endif
 
-                        <span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span>
-                        <span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span>
-                        <span class="btn btn-small disabled b-r-20">منطقة: {{ $property->area}} Sq Ft</span>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div>
-                        <h4 class="left">${{ $property->price }}</h4>
-                        <button type="button" class="btn btn-small m-t-25 right disabled b-r-20"> قيمة {{ $property->purpose }}</button>
+                <div class="right-column pull-right clearfix">
+                    <div class="price-inner clearfix">
+                        <ul class="category clearfix pull-left px-auto">
+                            <li><a href="#">{{ $property->purpose }}</a></li>
+                            <li><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span></li>
+                            <li><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span></li>
+                            <li><span class="btn btn-small disabled b-r-20">منطقة: {{ $property->area}} Sq Ft</span></li>
+    
+
+                        </ul>
+                        <div class="price-box pull-right pr-2">
+                            <h3>${{ $property->price }}</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row clearfix">
+                <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                    <div class="property-details-content">
+                        <div class="carousel-inner">
+                            <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
 
-                <div class="col s12 m8">
-
-                    @if(!$property->gallery->isEmpty())
-                        <div class="single-slider">
-                            @include('pages.properties.slider')
-                        </div>
-                    @else
-                        <div class="single-image">
-                            @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                <img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}" class="imgresponsive">
+                                @if(!$property->gallery->isEmpty())
+                                <div class="single-slider">
+                                    <figure class="image-box"><img src="{{asset('frontend/images/resource/property-details-1.jpg')}}" alt=""></figure>
+                                    <figure class="image-box"><img src="{{asset('frontend/images/resource/property-details-1.jpg')}}" alt=""></figure>
+                                    <figure class="image-box"><img src="{{asset('frontend/images/resource/property-details-1.jpg')}}" alt=""></figure>
+                                    </div>
+                            @else
+                                <div class="single-image">
+                                    @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
+                                    <figure class="image-box"><img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></figure>
+                                    @endif
+                                </div>
                             @endif
-                        </div>
-                    @endif
-
-                    <div class="single-description p-15 m-b-15 border2 border-top-0">
-                        {!! $property->description !!}
-                    </div>
-
-                    <div>
-                        @if($property->features)
-                            <ul class="collection with-header">
-                                <li class="collection-header grey lighten-4"><h5 class="m-0">Features</h5></li>
-                                @foreach($property->features as $feature)
-                                    <li class="collection-item">{{$feature->name}}</li>
-                                @endforeach
-                            </ul>
-                        @endif
-                    </div>
-
-                    <div class="card-no-box-shadow card">
-                        <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">تخطيط الارض</h5>
-                        </div>
-                        <div class="card-image">
-                            @if(Storage::disk('public')->exists('property/'.$property->floor_plan) && $property->floor_plan)
-                                <img src="{{Storage::url('property/'.$property->floor_plan)}}" alt="{{$property->title}}" class="imgresponsive">
-                            @endif
-                        </div>
-                    </div>
-
-                    <div class="card-no-box-shadow card">
-                        <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">الموقع</h5>
-                        </div>
-                        <div class="card-image">
-                            <div id="map"></div>
-                        </div>
-                    </div>
-
-                    @if($videoembed)
-                        <div class="card-no-box-shadow card">
-                            <div class="p-15 grey lighten-4">
-                                <h5 class="m-0">مقطع </h5>
                             </div>
-                            <div class="card-image center m-t-10">
+                        </div>
+                        @if($property->features)
+                        <div class="discription-box content-widget">
+                            <div class="title-box">
+                                <h4>مميزات العقار</h4>
+                            </div>
+                            <div class="text">
+                                @foreach($property->features as $feature)
+                                <p>{{$feature->name}}</p>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+                        <div class="discription-box content-widget">
+                            <div class="title-box">
+                                <h4>تخطيط الارض</h4>
+                            </div>
+                            <div class="text">
+                                @if(Storage::disk('public')->exists('property/'.$property->floor_plan) && $property->floor_plan)
+                                <img src="{{Storage::url('property/'.$property->floor_plan)}}" alt="{{$property->title}}" class="image-box">
+                            @endif
+                            </div>
+                        </div>
+
+
+
+                        @if($videoembed)
+                        <div class="discription-box content-widget">
+                            <div class="title-box">
+                                <h4>مقطع فيديو للعقار</h4>
+                            </div>
+                            <div class="text">
                                 {!! $videoembed !!}
                             </div>
                         </div>
-                    @endif
-
-                    <div class="card-no-box-shadow card">
-                        <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">
-                                {{ $property->comments_count }} تعليقات
-                                @auth
-                                <div class="right" id="rateYo"></div>
-                                @endauth
-                            </h5>
-                        </div>
-                        <div class="single-narebay p-15">
-
-                            @foreach($property->comments as $comment)
-
-                                @if($comment->parent_id == NULL)
-                                    <div class="comment">
-                                        <div class="author-image">
-                                            <span style="background-image:url({{ Storage::url('users/'.$comment->users->image) }});"></span>
-                                        </div>
-                                        <div class="content">
-                                            <div class="author-name">
-                                                <strong>{{ $comment->users->name }}</strong>
-                                                <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
-
-                                                @auth
-                                                    <span id="commentreplay" class="right replay" data-commentid="{{ $comment->id }}">Replay</span>
-                                                @endauth
-
-                                            </div>
-                                            <div class="author-comment">
-                                                {{ $comment->body }}
-                                            </div>
-                                        </div>
-                                        <div id="procomment-{{$comment->id}}"></div>
-                                    </div>
-                                @endif
-
-                                @foreach($comment->children as $commentchildren)
-                                    <div class="comment children">
-                                        <div class="author-image">
-                                            <span style="background-image:url({{ Storage::url('users/'.$commentchildren->users->image) }});"></span>
-                                        </div>
-                                        <div class="content">
-                                            <div class="author-name">
-                                                <strong>{{ $commentchildren->users->name }}</strong>
-                                                <span class="time">{{ $commentchildren->created_at->diffForHumans() }}</span>
-                                            </div>
-                                            <div class="author-comment">
-                                                {{ $commentchildren->body }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-
-                            @endforeach
-
-                            @auth
-                                <div class="comment-box">
-                                    <h6>اترك تعليق</h6>
-                                    <form action="{{ route('property.comment',$property->id) }}" method="POST">
-                                        @csrf
-                                        <input type="hidden" name="parent" value="0">
-
-                                        <textarea name="body" class="box"></textarea>
-                                        <input type="submit" class="btn indigo" value="Comment">
-                                    </form>
-                                </div>
-                            @endauth
-
-                            @guest 
-                                <div class="comment-login">
-                                    <h6>سجل الدخول لترك تعليق</h6>
-                                    <a href="{{ route('login') }}" class="btn indigo">دخول</a>
-                                </div>
-                            @endguest
-                            
-                        </div>
+                        @endif
                     </div>
-
                 </div>
-                
-                
-                
-                
-                
-                {{-- End ./COL M8 --}}
+                <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                    <div class="property-sidebar default-sidebar">
+                        <div class="author-widget sidebar-widget">
+                            <div class="author-box">
+                                <figure class="author-thumb"><img src="{{Storage::url('users/'.$property->user->image)}}" alt=""></figure>
+                                <div class="inner">
+                                    <h4>{{ $property->user->name }}</h4>
+                                    <ul class="info clearfix">
+                                        <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->email }}</li>
+                                        <li><a href="{{ route('agents.show',$property->agent_id) }}">التواصل مع الوسيط</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-inner">
+                                <form class="default-form agent-message-box" action="" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="agent_id" value="{{ $property->user->id }}">
+                                    <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                                    <input type="hidden" name="property_id" value="{{ $property->id }}">
 
-                <div class="col s12 m4">
-                    <div class="clearfix">
-
-                        <div>
-                            <ul class="collection with-header m-t-0">
-                                <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">Contact with Agent</h5>
-                                </li>
-                                <li class="collection-item p-0">
-                                    @if($property->user)
-                                        <div class="card horizontal card-no-shadow">
-                                            <div class="card-image p-l-10 agent-image">
-                                                <img src="{{Storage::url('users/'.$property->user->image)}}" alt="{{ $property->user->username }}" class="imgresponsive">
-                                            </div>
-                                            <div class="card-stacked">
-                                                <div class="p-l-10 p-r-10">
-                                                    <h5 class="m-t-b-0">{{ $property->user->name }}</h5>
-                                                    <strong>{{ $property->user->email }}</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="p-l-10 p-r-10">
-                                            <p>{{ $property->user->about }}</p>
-                                            <a href="{{ route('agents.show',$property->agent_id) }}" class="profile-link">Profile</a>
-                                        </div>
-                                    @endif
-                                </li>
-
-                                <li class="collection agent-message">
-                                    <form class="agent-message-box" action="" method="POST">
-                                        @csrf
-                                        <input type="hidden" name="agent_id" value="{{ $property->user->id }}">
-                                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                                        <input type="hidden" name="property_id" value="{{ $property->id }}">
-                                            
-                                        <div class="box">
-                                            <input type="text" name="name" placeholder="Your Name">
-                                        </div>
-                                        <div class="box">
-                                            <input type="email" name="email" placeholder="Your Email">
-                                        </div>
-                                        <div class="box">
-                                            <input type="number" name="phone" placeholder="Your Phone">
-                                        </div>
-                                        <div class="box">
-                                            <textarea name="message" placeholder="Your Msssage"></textarea>
-                                        </div>
-                                        <div class="box">
-                                            <button id="msgsubmitbtn" class="btn waves-effect waves-light w100 indigo" type="submit">
-                                                SEND
-                                                <i class="material-icons left">send</i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
+                                <div class="form-group">
+                                        <input type="text" name="name" placeholder="الإسم" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="البريد الإلكتروني" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" name="phone" placeholder="رقم الهاتف" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="الرسالة"></textarea>
+                                    </div>
+                                    <div class="form-group message-btn">
+                                        <button id="msgsubmitbtn" type="submit" class="theme-btn btn-one">إرسال</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-
-                        <div>
-                            <ul class="collection with-header">
-                                <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">City List</h5>
-                                </li>
-                                @foreach($cities as $city)
-                                    <li class="collection-item p-0">
-                                        <a class="city-list" href="{{ route('property.city',$city->city_slug) }}">
-                                            <span>{{ $city->city }}</span>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
-                        <div>
-                            <ul class="collection with-header">
-                                <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">Related Properties</h5>
-                                </li>
-                                @foreach($relatedproperty as $property_related)
-                                    <li class="collection-item p-0">
-                                        <a href="{{ route('property.show',$property_related->id) }}">
-                                            <div class="card horizontal card-no-shadow m-0">
-                                                @if($property_related->image)
-                                                <div class="card-image">
-                                                    <img src="{{Storage::url('property/'.$property_related->image)}}" alt="{{$property_related->title}}" class="imgresponsive">
-                                                </div>
-                                                @endif
-                                                <div class="card-stacked">
-                                                    <div class="p-l-10 p-r-10 indigo-text">
-                                                        <h6 title="{{$property_related->title}}">{{ str_limit( $property_related->title, 18 ) }}</h6>
-                                                        <strong>&dollar;{{$property_related->price}}</strong>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -408,128 +269,26 @@
                     data: data,
                     beforeSend: function() {
                         $(btn).addClass('disabled');
-                        $(btn).empty().append('LOADING...<i class="material-icons left">rotate_right</i>');
+                        $(btn).empty().append('جاري الإرسال..');
                     },
                     success: function(data) {
                         if (data.message) {
-                            M.toast({html: data.message, classes:'green darken-4'})
+                        $('form.agent-message-box')[0].reset();
+                        $(btn).removeClass('disabled');
+                        $(btn).empty().append('تم الإرسال');
                         }
                     },
                     error: function(xhr) {
-                        M.toast({html: xhr.statusText, classes: 'red darken-4'})
+                        $(btn).removeClass('disabled');
+                        $(btn).empty().append('إعادة الإرسال');
                     },
                     complete: function() {
                         $('form.agent-message-box')[0].reset();
-                        $(btn).removeClass('disabled');
-                        $(btn).empty().append('SEND<i class="material-icons left">send</i>');
                     },
                     dataType: 'json'
                 });
 
             })
         })
-    </script>
-
-    <script src="{{ asset('frontend/js/jssor.slider.min.js') }}"></script>
-    <script>
-        jssor_1_slider_init = function() {
-
-            var jssor_1_SlideshowTransitions = [
-            {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-            {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
-            ];
-
-            var jssor_1_options = {
-            $AutoPlay: 1,
-            $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-            },
-            $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-            },
-            $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $SpacingX: 5,
-                $SpacingY: 5
-            }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*#region responsive code begin*/
-
-            var MAX_WIDTH = 980;
-
-            function ScaleSlider() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
-
-                if (containerWidth) {
-
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                    jssor_1_slider.$ScaleWidth(expectedWidth);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-
-            ScaleSlider();
-
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
-        };
-
-        @if(!$property->gallery->isEmpty())
-            jssor_1_slider_init();
-        @endif
-
-    </script>
-    <script>
-        function initMap() {
-            var propLatLng = {
-                lat: <?php echo $property->location_latitude; ?>,
-                lng: <?php echo $property->location_longitude; ?>
-            };
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: propLatLng
-            });
-
-            var marker = new google.maps.Marker({
-                position: propLatLng,
-                map: map,
-                title: '<?php echo $property->title; ?>'
-            });
-        }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRLaJEjRudGCuEi1_pqC4n3hpVHIyJJZA&callback=initMap">
     </script>
 @endsection
