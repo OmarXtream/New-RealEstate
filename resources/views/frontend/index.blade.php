@@ -67,7 +67,7 @@
                         <div class="upper-box clearfix">
                             <div class="sec-title">
                                 <h5>خدماتنا</h5>
-                                <h2>لماذا تختارنا؟</h2>
+                                <h4>رسالتنا هي تحقيق رغبات العملاء بتوفير وحدات سكنية ذات جودة عالية وخدمات مميزة</h4>
                             </div>
                         </div>
                         <div class="lower-box">
@@ -147,7 +147,7 @@
                     <div class="col-lg-4 col-md-12 col-sm-12 title-column">
                         <div class="sec-title">
                             <h5>شركائنا</h5>
-                            <h2>نعتني بفريق عمل شركائنا كامتداد لنا ففريقك فريقنا، ونجاحك نجاحنا.</h2>
+                            <h2>في روشم نفتخر بشركاء النجاح الذين يقدمون الدعم لنا في المشروعات العقارية والتجارية المختلفة .</h2>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12 inner-column">

@@ -6,15 +6,27 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget about-widget">
                                 <div class="widget-title">
-                                    <h3>معلومات عنا</h3>
+                                    <h3>الرؤية</h3>
                                 </div>
                                 <div class="text">
                                     @if(isset($footersettings[0]) && $footersettings[0]['aboutus'])
                                     <p class="grey-text text-lighten-4">{{ $footersettings[0]['aboutus'] }}</p>
                                     @else
-                                    <p class="grey-text text-lighten-4">إن عمارة الأرض من أولى المهام التي كلف بها الله عز وجل الإنسان ونحن في شركة روشم العقارية جعلنا هذا التكليف تشريفاً لنا أن نكون ممن يعمرون الأرض من خلال كيان عقاري ناجح يدار برؤية اقتصادية وجدوى استثمارية تحقق المعادلات الصعبة للعمل الناجح.</p>
+                                    <p class="grey-text text-lighten-4">رؤيتنا هي تحقيق النجاح وخلق معايير جديدة في الإستثمار العقاري من خلال مستويات عالية من الخبرة والإبداع</p>
                                     @endif
                                  </div>
+
+                                 <div class="widget-title mt-2">
+                                    <h3>الهدف</h3>
+                                </div>
+                                <div class="text">
+                                    @if(isset($footersettings[0]) && $footersettings[0]['aboutus'])
+                                    <p class="grey-text text-lighten-4">{{ $footersettings[0]['aboutus'] }}</p>
+                                    @else
+                                    <p class="grey-text text-lighten-4">أن نكون أحد الشركات الرائدة في عالم العقارات وأن نستمر في توسيع بصمتنا وإستراتجيتنا في النمو من أجل خلق قيمة لعملائنا</p>
+                                    @endif
+                                 </div>
+
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
