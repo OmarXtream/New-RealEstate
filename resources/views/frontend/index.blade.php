@@ -67,7 +67,7 @@
                         <div class="upper-box clearfix">
                             <div class="sec-title">
                                 <h5>خدماتنا</h5>
-                                <h4>رسالتنا هي تحقيق رغبات العملاء بتوفير وحدات سكنية ذات جودة عالية وخدمات مميزة</h4>
+                                <h2>لماذا تختارنا؟</h2>
                             </div>
                         </div>
                         <div class="lower-box">
