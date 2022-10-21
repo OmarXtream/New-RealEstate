@@ -75,9 +75,8 @@
                                 <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
                                     <div class="chooseus-block-one">
                                         <div class="inner-box">
-                                            <div class="icon-box"><i class="icon-19"></i></div>
-                                            <h4>العقار الحديث</h4>
-                                            <p>توظـيف وتطـويع التقنيـات الحديثـة لبنـاء بيئـة استثمارية محليـة واعـدة</p>
+                                            <div class="icon-box"><i class="icon-25"></i></div>
+                                            <h4>التسويق العقاري</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -85,20 +84,49 @@
                                     <div class="chooseus-block-one">
                                         <div class="inner-box">
                                             <div class="icon-box"><i class="icon-26"></i></div>
-                                            <h4>الإستثمار العقاري الناجح</h4>
-                                            <p>طـرح آليـات جديـدة للاستثمار تواكب حاجات المجتمع وتناسب كافة شـرائحه</p>
+                                            <h4>حلول مالية بأقل هامش ربح مع فائض</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-24"></i></div>
+                                            <h4>عمل محتسب تمويل عقاري</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
                                     <div class="chooseus-block-one">
                                         <div class="inner-box">
-                                            <div class="icon-box"><i class="icon-21"></i></div>
-                                            <h4>سعي دائم إلى التفوق</h4>
-                                            <p>تأصيـل نمـوذج مثالي للاستثمار العقـاري يمـزج بيـن الأصـالة والمستقبل </p>
+                                            <div class="icon-box"><i class="icon-19"></i></div>
+                                            <h4>رفع الطلب للتمويل العقاري</h4>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-21"></i></div>
+                                            <h4>توفير الدفعة الأولى للعقار</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-3"></i></div>
+                                            <h4>توفير العقار بالمواصفات المطلوبة</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
                             </div>
                         </div>
                     </div>
