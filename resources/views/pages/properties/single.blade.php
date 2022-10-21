@@ -90,7 +90,7 @@
 
                         </ul>
                         <div class="price-box pull-right pr-2">
-                            <h3>${{ $property->price }}</h3>
+                            <h3>{{ $property->price }} ريال</h3>
                         </div>
                     </div>
                 </div>
@@ -102,11 +102,18 @@
                             <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
 
                                 @if(!$property->gallery->isEmpty())
+
+                                @foreach($property->gallery as $gallery)
+
                                 <div class="single-slider">
-                                    <figure class="image-box"><img src="{{asset('frontend/images/resource/property-details-1.jpg')}}" alt=""></figure>
-                                    <figure class="image-box"><img src="{{asset('frontend/images/resource/property-details-1.jpg')}}" alt=""></figure>
-                                    <figure class="image-box"><img src="{{asset('frontend/images/resource/property-details-1.jpg')}}" alt=""></figure>
-                                    </div>
+
+                                    <a class="lightbox" href="{{Storage::url('property/gallery/'.$gallery->name)}}">
+                                    <figure class="image-box"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
+                                    </a>
+
+                                </div>
+                                @endforeach
+
                             @else
                                 <div class="single-image">
                                     @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
