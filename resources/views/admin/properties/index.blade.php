@@ -88,6 +88,10 @@
                                             @method('DELETE')
                                         </form>
 
+                                        <a href="{{route('admin.favorites',$property->id)}}" class="btn btn-warning btn-sm waves-effect">
+                                            <i class="material-icons">star</i>
+                                        </a>
+
 
                                     </td>
                                 </tr>

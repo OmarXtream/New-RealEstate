@@ -71,7 +71,7 @@
                             <input type="number" class="form-control" name="area" required>
                             <label class="form-label">المساحة الارضية</label>
                         </div>
-                        <div class="help-info">متر مربع</div>
+                        <div class="help-info">Square Feet</div>
                     </div>
 
                     <div class="form-group">

@@ -62,6 +62,11 @@
 
     <!-- SINGLE PROPERTY SECTION -->
     <section class="property-details property-details-one">
+        @if (session()->has('message'))
+        <div class="text-center alert alert-light">
+            <h3 style="font-weight: bold; color:#000">{{ session('message') }}</h3>
+        </div>
+        @endif
         <div class="auto-container">
             <div class="top-details clearfix">
                 <div class="left-column pull-left clearfix">
@@ -85,7 +90,7 @@
                             <li><a href="#">{{ $property->purpose }}</a></li>
                             <li><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span></li>
                             <li><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span></li>
-                            <li><span class="btn btn-small disabled b-r-20">منطقة: {{ $property->area}} Sq Ft</span></li>
+                            <li><span class="btn btn-small disabled b-r-20">المساحة الارضية: {{ $property->area}} متر مربع</span></li>
     
 
                         </ul>
@@ -93,6 +98,17 @@
                             <h3>{{ $property->price }} ريال</h3>
                         </div>
                     </div>
+                </div>
+
+                <div class="right-column pull-right clearfix mr-3">
+                    <ul class="other-option pull-right clearfix">
+                        <li><a href="#" onclick="CopyURL()"><i class="icon-37" title="مشاركة"></i></a></li>
+                        @if(!$fav)
+                        <li><a href="{{route('favorite.create',$property->id)}}"><i class="icon-13" title="المفضلة"></i></a></li>
+                        @else
+                        <li><a href="{{route('favorite.delete',$property->id)}}"><i class="icon-13" title="الغاء من المفضلة"></i></a></li>
+                        @endif
+                    </ul>
                 </div>
             </div>
             <div class="row clearfix">
@@ -125,7 +141,7 @@
                         </div>
                         @if($property->features)
                         <div class="discription-box content-widget">
-                            <div class="title-box">
+                            <div class="title-box text-center">
                                 <h4>مميزات العقار</h4>
                             </div>
                             <div class="text">
@@ -136,7 +152,7 @@
                         </div>
                         @endif
                         <div class="discription-box content-widget">
-                            <div class="title-box">
+                            <div class="title-box text-center">
                                 <h4>تخطيط الارض</h4>
                             </div>
                             <div class="text">
@@ -150,7 +166,7 @@
 
                         @if($videoembed)
                         <div class="discription-box content-widget">
-                            <div class="title-box">
+                            <div class="title-box text-center">
                                 <h4>مقطع فيديو للعقار</h4>
                             </div>
                             <div class="text">
@@ -158,6 +174,81 @@
                             </div>
                         </div>
                         @endif
+
+                        <div class="discription-box content-widget">
+                            <div class="title-box text-center">
+                                <h4>{{ $property->comments_count }} تعليقات </h4>
+                            </div>
+                            <div class="text">
+                                @foreach($property->comments as $comment)
+
+                                @if($comment->parent_id == NULL)
+                                    <div class="comment text-center">
+                                        <div class="author-image">
+                                            <span style="background-image:url({{ Storage::url('users/'.$comment->users->image) }});"></span>
+                                        </div>
+                                        <div class="content">
+                                            <div class="author-name">
+                                                <strong style="color:#0f172b;">{{ $comment->users->name }} -</strong>
+                                                <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
+
+                                            </div>
+                                            <div class="author-comment">
+                                                {{ $comment->body }}
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div id="procomment-{{$comment->id}}"></div>
+                                    </div>
+                                @endif
+
+                                @foreach($comment->children as $commentchildren)
+                                    <div class="comment children">
+                                        <div class="author-image">
+                                            <span style="background-image:url({{ Storage::url('users/'.$commentchildren->users->image) }});"></span>
+                                        </div>
+                                        <div class="content">
+                                            <div class="author-name">
+                                                <strong>{{ $commentchildren->users->name }}</strong>
+                                                <span class="time">{{ $commentchildren->created_at->diffForHumans() }}</span>
+                                            </div>
+                                            <div class="author-comment">
+                                                {{ $commentchildren->body }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                            @endforeach
+
+                            </div>
+                        </div>
+                        @auth
+
+                        <div class="form-inner">
+                            <form class="default-form" action="{{ route('property.comment',$property->id) }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="parent" value="0">
+
+
+                                <div class="form-group">
+                                    <textarea name="body" placeholder="التعليق"></textarea>
+                                </div>
+                                <div class="form-group message-btn">
+                                    <button type="submit" class="theme-btn btn-one">إرسال</button>
+                                </div>
+                            </form>
+                        </div>
+                        @endauth
+
+                        @guest 
+                        <div class="text-center">
+                            <a href="{{ route('login') }}">
+                            <h6 class="text-bold" style="color:#000">سجل الدخول لترك تعليق</h6>
+                            </a>
+                        </div>
+                    @endguest
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
@@ -200,6 +291,9 @@
                         </div>
                     </div>
                 </div>
+
+
+                
             </div>
         </div>
     </section>
@@ -212,7 +306,17 @@
 @endsection
 
 @section('scripts')
-
+<script type="text/javascript" charset="utf-8">
+    function CopyURL(){
+        navigator.clipboard.writeText(window.location.href);
+        toastr.options.positionClass = 'toast-bottom-left';
+        toastr.options.rtl = true;
+    
+        toastr.success('تم النسخ بنجاح','للمشاركة',{
+                            closeButtor: true,
+                            progressBar: true 
+                        });}
+    </script>
     <script>
         $(function(){
 
@@ -242,25 +346,25 @@
             });
             
 
-            // COMMENT
-            $(document).on('click','#commentreplay',function(e){
-                e.preventDefault();
+            // // COMMENT
+            // $(document).on('click','#commentreplay',function(e){
+            //     e.preventDefault();
                 
-                var commentid = $(this).data('commentid');
+            //     var commentid = $(this).data('commentid');
 
-                $('#procomment-'+commentid).empty().append(
-                    `<div class="comment-box">
-                        <form action="{{ route('property.comment',$property->id) }}" method="POST">
-                            @csrf
-                            <input type="hidden" name="parent" value="1">
-                            <input type="hidden" name="parent_id" value="`+commentid+`">
+            //     $('#procomment-'+commentid).empty().append(
+            //         `<div class="comment-box">
+            //             <form action="{{ route('property.comment',$property->id) }}" method="POST">
+            //                 @csrf
+            //                 <input type="hidden" name="parent" value="1">
+            //                 <input type="hidden" name="parent_id" value="`+commentid+`">
                             
-                            <textarea name="body" class="box" placeholder="Leave a comment"></textarea>
-                            <input type="submit" class="btn indigo" value="Comment">
-                        </form>
-                    </div>`
-                );
-            });
+            //                 <textarea name="body" class="box" placeholder="Leave a comment"></textarea>
+            //                 <input type="submit" class="btn indigo" value="Comment">
+            //             </form>
+            //         </div>`
+            //     );
+            // });
 
             // MESSAGE
             $(document).on('submit','.agent-message-box',function(e){

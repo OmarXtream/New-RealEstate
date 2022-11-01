@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', 'Properties')
+@section('title', 'Property requests')
 
 @push('styles')
 
@@ -11,11 +11,11 @@
 
 @section('content')
 
-    <div class="row clearfix rtl">
+    <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <center><h2>{{$propertie->title}}  قائمة المفضلين لعقار </h2></center>
+                    <h2 class="text-center">قائمة طلبات التسويق</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
@@ -23,25 +23,37 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>الاسم الكامل</th>
-                                    <th>اسم المستخدم</th>
-                                    <th>البريد الالكتروني</th>
+                                    <th>الإسم</th>
+                                    <th>رقم الهاتف</th>
+                                    <th>النوع</th>
 
+                                    <th>المدينة</th>
+                                    <th>عدد الغرف</th>
+                                    <th>عدد دورات المياه</th>
+                                    <th>سعر العقار</th>
+
+                                    <th width="100px">التفاصيل</th>
                                 </tr>
                             </thead>
-
                             <tbody>
-                                @forelse( $propertie->favorites as $fav )
-                                
+                                @forelse($markating as $rq)
                                 <tr>
-                                    <td>{{$fav->id}}</td>
-                                    <td>{{$fav->name}}</td>
-                                    <td>{{$fav->username}}</td>
-                                    <td>{{$fav->email}}</td>
+                                    <td>{{$rq->id}}</td>
+                                    <td>{{$rq->name}}</td>
+                                    <td>{{$rq->phone}}</td>
+                                    <td>{{$rq->type}}</td>
+
+                                    <td>{{$rq->city}}</td>
+                                    <td>{{$rq->rooms}}</td>
+                                    <td>{{$rq->baths}}</td>
+
+                                    <td>{{$rq->price}}</td>
+
+                                    <td col="2">{{$rq->details}}</td>
 
                                 </tr>
                                 @empty
-                                <h3>لا يوجد اي مستخدمين مفضلين للعقار حالياً</h3>
+                                <h2>لا يوجد اي طلبات حالياً</h2>
                                 @endforelse
                             </tbody>
                         </table>
@@ -69,6 +81,5 @@
 
     <!-- Custom Js -->
     <script src="{{ asset('backend/js/pages/tables/jquery-datatable.js') }}"></script>
-
 
 @endpush
