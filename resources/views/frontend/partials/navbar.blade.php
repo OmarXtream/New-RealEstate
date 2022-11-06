@@ -48,7 +48,7 @@
                                         </li> --}}
 
                                         <li class="{{ Request::is('InfoForm*') ? 'active' : '' }}">
-                                            <a href="{{ route('InfoForm') }}"><span>حلول عقارية</span></a>
+                                            <a href="{{ route('InfoForm') }}"><span>حلول تمويلية</span></a>
                                         </li>
 
                                         <li class="{{ Request::is('contact') ? 'active' : '' }}">
