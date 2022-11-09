@@ -186,7 +186,13 @@
                         <input type="file" name="image">
                     </div>
 
-                    {{-- BUTTON --}}
+                
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="header bg-indigo text-center">
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
                         <span>الرجوع</span>
@@ -197,7 +203,9 @@
                         <span>حفظ</span>
                     </button>
                 </div>
+               
             </div>
+
         </div>
         </form>
     </div>
