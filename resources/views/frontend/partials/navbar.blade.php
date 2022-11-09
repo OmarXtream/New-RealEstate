@@ -43,14 +43,15 @@
                                             <a href="{{ route('gallery') }}"><span>المعرض</span></a>
                                         </li> --}}
 
-                                        {{-- <li class="{{ Request::is('blog*') ? 'active' : '' }}">
-                                            <a href="{{ route('blog') }}"><span>المدونة</span></a>
-                                        </li> --}}
+                                    
 
                                         <li class="{{ Request::is('InfoForm*') ? 'active' : '' }}">
                                             <a href="{{ route('InfoForm') }}"><span>حلول تمويلية</span></a>
                                         </li>
 
+                                        <li class="{{ Request::is('blog*') ? 'active' : '' }}">
+                                            <a href="{{ route('blog') }}">المدونة</a>
+                                        </li>
                                         <li class="{{ Request::is('contact') ? 'active' : '' }}">
                                             <a href="{{ route('contact') }}"><span> تواصل معنا </span></span></a>
                                         </li>
