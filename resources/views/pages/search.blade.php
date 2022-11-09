@@ -43,8 +43,9 @@
                             <div class="select-box" style="text-align: right;">
                                 <select name="type" class="wide" >
                                     <option value="" data-display="اختر النوع" disabled selected>اختر النوع</option>
-                                    <option value="apartment">شقة</option>
-                                    <option value="house">بيت</option>
+                                    <option value="شقة">شقة</option>
+                                    <option value="بيت">بيت</option>
+                                    <option value="ملحق">ملحق</option>
                                 </select>
                             </div>
                             <div class="select-box" style="text-align: right;">
@@ -142,7 +143,7 @@
                                         <div class="price-box clearfix">
                                             <div class="price-info pull-left">
                                                 <h6>{{ $property->type }} - {{ $property->purpose }}</h6>
-                                                <h4>${{ $property->price }}</h4>
+                                                <h4>{{ $property->price }}</h4>
                                             </div>
                                             <div class="author-box pull-right">
                                                     <span>{{ ucfirst($property->city) }} - {{ ucfirst($property->address) }}</span>

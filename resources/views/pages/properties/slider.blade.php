@@ -28,16 +28,11 @@
     background-color: transparent !important;
 }
 
-
- 
 </style>
-
- 
- 
      
     <div class="tz-gallery">
           
- 
+
                         @foreach($property->gallery as $gallery)
 
             <div class="col-sm-6 col-md-4">
@@ -47,11 +42,6 @@
             </div>
             
                         @endforeach
- 
-            
-   
-
-    
 
 </div>
 

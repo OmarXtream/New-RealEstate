@@ -127,6 +127,8 @@
                                 <option value="">-- اختر --</option>
                                 <option value="بيت">بيت</option>
                                 <option value="شقة">شقة</option>
+                                <option value="ملحق">ملحق</option>
+
                             </select>
                         </div>
                     </div>
