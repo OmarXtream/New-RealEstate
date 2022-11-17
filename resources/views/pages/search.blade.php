@@ -52,8 +52,8 @@
                             <div class="select-box" style="text-align: right;">
                                 <select name="purpose" class="wide" >
                                     <option value="" data-display="اختر الغرض" disabled selected>اختر الغرض</option>
-                                    <option value="rent">إيجار</option>
-                                    <option value="sale">بيع</option>
+                                    <option value="إيجار">إيجار</option>
+                                    <option value="بيع">بيع</option>
                                 </select>
                             </div>
 
