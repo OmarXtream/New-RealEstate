@@ -4,8 +4,8 @@
             <div class="header-lower">
                 <div class="outer-box">
                     <div class="main-box">
-                        <div class="logo-box">
-                            <figure class="logo"><a href="{{ route('home') }}"><img src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
+                        <div class="logo-box" style="width:214px !important; height:170px !important;">
+                            <figure class="logo"><a href="{{ route('home') }}"><img style="width:214px !important; height:150px !important;" src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix">
                             <!--Mobile Navigation Toggler-->
