@@ -216,13 +216,13 @@ class PagesController extends Controller
             'message'   => $message
         ]);
             
-        $adminname  = User::find(1)->name;
-        $mailto     = $request->mailto;
+        // $adminname  = User::find(1)->name;
+        // $mailto     = $request->mailto;
 
-        Mail::to($mailto)->send(new Contact($message,$adminname,$mailfrom));
+        // Mail::to($mailto)->send(new Contact($message,$adminname,$mailfrom));
 
         if($request->ajax()){
-            return response()->json(['message' => 'Message send successfully.']);
+            return response()->json(['message' => 'تم الإرسال بنجاح.']);
         }
 
     }
