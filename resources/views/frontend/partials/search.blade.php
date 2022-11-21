@@ -22,7 +22,7 @@
                                                             <label>الموقع</label>
                                                             <div class="field-input">
                                                                 <i class="fas fa-search"></i>
-                                                                <input type="search" name="city" placeholder="مدينة-منطقة" required="">
+                                                                <input type="search" name="city" placeholder="مدينة-منطقة">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -48,7 +48,7 @@
                                                             <label>اعلى سعر مطلوب</label>
                                                             <div class="field-input">
                                                                 <i class="fas fa-money"></i>
-                                                                <input type="search" name="maxprice" placeholder="أعلى سعر" required="">
+                                                                <input type="search" name="maxprice" placeholder="أعلى سعر">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -87,7 +87,7 @@
                                                             <label>الموقع</label>
                                                             <div class="field-input">
                                                                 <i class="fas fa-search"></i>
-                                                                <input type="search" name="city" placeholder="مدينة-منطقة" required="">
+                                                                <input type="search" name="city" placeholder="مدينة-منطقة">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -111,7 +111,7 @@
                                                             <label>اعلى سعر مطلوب</label>
                                                             <div class="field-input">
                                                                 <i class="fas fa-money"></i>
-                                                                <input type="search" name="maxprice" placeholder="أعلى سعر" required="">
+                                                                <input type="search" name="maxprice" placeholder="أعلى سعر">
                                                             </div>
                                                         </div>
                                                     </div>
