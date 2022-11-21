@@ -16,11 +16,13 @@ class FrontpageController extends Controller
     {
         $sliders        = Slider::latest()->get();
         $properties     = Property::latest()->where('featured',1)->with('rating')->withCount('comments')->take(6)->get();
+        $Normalproperties = Property::latest()->with('rating')->withCount('comments')->take(6)->get();
+
         $services       = Service::orderBy('service_order')->get();
         $testimonials   = Testimonial::latest()->get();
         $posts          = Post::latest()->where('status',1)->take(6)->get();
 
-        return view('frontend.index', compact('sliders','properties','services','testimonials','posts'));
+        return view('frontend.index', compact('sliders','properties','services','testimonials','posts','Normalproperties'));
     }
 
 

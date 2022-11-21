@@ -61,6 +61,64 @@
         <!-- feature-style-two end -->
 
 
+        <section class="feature-style-two sec-pad">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <h5>العقارات</h5>
+                    <h2>أحدث العقارات</h2>
+                </div>
+                <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
+                    @foreach($Normalproperties as $Nproperty)
+
+                    <div class="feature-block-one">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                @if(Storage::disk('public')->exists('property/'.$Nproperty->image) && $Nproperty->image)
+                                <figure class="image"><img src="{{Storage::url('property/'.$Nproperty->image)}}" alt=""></figure>
+                                @else
+                                <figure class="image"><img src="{{asset('frontend/images/feature/feature-1.jpg')}}" alt=""></figure>
+                                @endif
+
+                                <div class="batch"><i class="icon-11"></i></div>
+                                <span class="category">مميز</span>
+                            </div>
+                            <div class="lower-content">
+                                <div class="author-info clearfix">
+                                    <div class="author pull-left">
+                                        <figure class="author-thumb"><img src="{{Storage::url('users/'.$Nproperty->user->image)}}" alt=""></figure>
+                                        <h6>{{ $Nproperty->user->name }}</h6>
+                                    </div>
+                                    <div class="buy-btn pull-right"><a href="{{ route('property.show',$Nproperty->slug) }}">{{ ucfirst($Nproperty->type) }} - {{ $Nproperty->purpose }}</a></div>
+                                </div>
+                                <div class="title-text"><h4><a href="{{ route('property.show',$Nproperty->slug) }}">{{ str_limit( $Nproperty->title, 18 ) }}</a></h4></div>
+                                <div class="price-box clearfix">
+                                    <div class="price-info pull-left">
+                                        <h6>تبدأ من</h6>
+                                        <h4>{{ $Nproperty->price }}</h4>
+                                    </div>
+                                    <ul class="other-option pull-right clearfix">
+                                        <li><a href="{{ route('property.show',$Nproperty->slug) }}"><i class="icon-12"></i></a></li>
+                                        <li><a href="{{ route('property.show',$Nproperty->slug) }}"><i class="icon-13"></i></a></li>
+                                    </ul>
+                                </div>
+                                <p>{{ str_limit( $Nproperty->title, 18 ) }}</p>
+                                <ul class="more-details clearfix">
+                                    <li><i class="icon-14"></i>غرف: {{ $Nproperty->bedroom}}</li>
+                                    <li><i class="icon-15"></i>دورات المياه: {{ $Nproperty->bathroom}}</li>
+                                    <li><i class="icon-16"></i>المساحة الارضية: {{ $Nproperty->area}}</li>
+                                </ul>
+                                <div class="btn-box"><a href="{{ route('property.show',$Nproperty->slug) }}" class="theme-btn btn-two">تفاصيل أكثر</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+
+                </div>
+                <div class="more-btn centred"><a href="{{ route('property') }}" class="theme-btn btn-one"> جميع العقارات</a></div>
+            </div>
+        </section>
+
+
                 <!-- chooseus-section -->
                 <section class="chooseus-section alternate-2 bg-color-1">
                     <div class="auto-container">
