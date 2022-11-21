@@ -303,5 +303,23 @@ class PagesController extends Controller
             $youtubelink
         );
     }
+
+
+    public function RemoveComment(Request $request)
+    {
+        if(Auth::user()->role_id == 1){
+            
+        $request->validate([
+            'id'  => 'required|exists:comments'
+        ]);
+        $comment = Comment::find($request->id);
+        $comment->delete();
+        
+        return redirect()->back()->with('message', 'تم حذف التعليق بنجاح');
+
+        }else{
+        return redirect()->back()->with('message', 'ليس لديك صلاحية الحذف');
+        }
+    }
     
 }

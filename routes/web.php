@@ -25,6 +25,9 @@ Route::post('/property/message', 'PagesController@messageAgent')->name('property
 Route::post('/property/comment/{id}', 'PagesController@propertyComments')->name('property.comment');
 Route::post('/property/rating', 'PagesController@propertyRating')->name('property.rating');
 Route::get('/property/city/{cityslug}', 'PagesController@propertyCities')->name('property.city');
+Route::post('/property/comment', 'PagesController@RemoveComment')->name('property.RemoveComment');
+
+
 
 Route::get('/agents', 'PagesController@agents')->name('agents');
 Route::get('/agents/{id}', 'PagesController@agentshow')->name('agents.show');
@@ -41,6 +44,7 @@ Route::get('/blog/author/{username}', 'PagesController@blogAuthor')->name('blog.
 
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::post('/contact', 'PagesController@messageContact')->name('contact.message');
+
 
 
 Auth::routes();
