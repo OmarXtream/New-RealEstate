@@ -27,15 +27,15 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 news-block">
                         <div class="news-block-two wow fadeInLeft animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box align-items-center img-fluid">
-                                <div class="image-box img-fluid">
-                                    <figure class="image"><a href="{{ route('blog.show',$post->slug) }}"><img class="img-fluid" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></a></figure>
-                                    <a href="{{ route('blog.show',$post->slug) }}" class="feature">تدوينة حديثه</a>
+                                <div class="image-box img-fluid" style="height: 100%">
+                                    <a href="{{ route('blog.show',$post->slug) }}"><img style="height: 100%" class="img-fluid" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></a>
                                 </div>
                                 <div class="content-box">
-                                    <h4><a href="{{ route('blog.show',$post->slug) }}">{{ $post->title }}</a></h4>
+                                    <h4><a style="color: black !important;" href="{{ route('blog.show',$post->slug) }}">{{ $post->title }}</a></h4>
                                     <ul class="post-info clearfix">
                                         <li class="author-box">
-                                            <h5><a href="{{ route('blog.show',$post->slug) }}">{{$post->user->name}}</a></h5>
+                                            {{-- <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure> --}}
+                                            <h5 style="color: black !important;"><a style="color: black !important;" href="{{ route('blog.show',$post->slug) }}">{{$post->user->name}}</a></h5>
                                         </li>
                                         <li>{{$post->created_at}}</li>
                                     </ul>
