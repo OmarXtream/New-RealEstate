@@ -128,7 +128,7 @@ class PostController extends Controller
                 Storage::disk('public')->delete('posts/'.$post->image);
             }
             $postimage = Image::make($image)->resize(1600, 980)->save();
-            Storage::disk('public')->put('posts/'.$imagename, $postimage);
+            Storage::disk('public')->put('posts/'.$imagename, $image);
 
         }else{
             $imagename = $post->image;
