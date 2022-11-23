@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="comments-area">
+                        <div class="comments-area mt-4">
                             <div class="group-title">
                                 <h4 class="text-right">{{ $post->comments_count }} تعليقات</h4>
                             </div>
