@@ -1,57 +1,6 @@
 @extends('frontend.layouts.app')
 
 @section('styles')
-<style>
-.linkedin__btn{
-  background: rgb(31,65,130);
-  color: #FFFFFF;
-}
-
-.whatsapp__btn{
-  background: #4AC357;
-  color: #FFFFFF;
-}
-
-.linkedin__btn:hover{
-  background: rgba(31,65,130,0.8);
-  
-}
-.facebook__btn{
-  background: #395693;
-  color: #FFFFFF;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.twitter__btn{
-  background: #1D9BF0;
-  color: #FFFFFF;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-/*  JUST FOR BETTER VIEW */
-.content__container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-}
-.share__btn__container{
-  border: 2px solid rgb(75,149,225);
-  width: 60%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-</style>
 @endsection
 
 @section('content')
