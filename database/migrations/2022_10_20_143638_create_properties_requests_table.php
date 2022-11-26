@@ -17,14 +17,14 @@ class CreatePropertiesRequestsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('phone');
-            $table->string('type');
+            $table->string('type')->nullable();
 
-            $table->string('city');
-            $table->integer('rooms');
-            $table->integer('baths');
+            $table->string('city')->nullable();
+            $table->integer('rooms')->nullable();
+            $table->integer('baths')->nullable();
 
-            $table->string('min_price');
-            $table->string('max_price');
+            $table->string('min_price')->nullable();
+            $table->string('max_price')->nullable();
 
 
             $table->string('first_district')->nullable();

@@ -19,15 +19,15 @@ class CreatePropertiesMarkatingsTable extends Migration
             $table->string('name');
             $table->integer('phone');
 
-            $table->string('type');
+            $table->string('type')->nullable();
 
-            $table->string('city');
-            $table->integer('rooms');
-            $table->integer('baths');
+            $table->string('city')->nullable();
+            $table->integer('rooms')->nullable();
+            $table->integer('baths')->nullable();
 
-            $table->integer('price');
+            $table->integer('price')->nullable();
 
-            $table->text('details');
+            $table->text('details')->nullable();
 
             $table->timestamps();
         });

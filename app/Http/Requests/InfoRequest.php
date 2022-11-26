@@ -25,17 +25,17 @@ class InfoRequest extends FormRequest
     {
         return [
             'name' => ['bail','required', 'string', 'max:255'],
-            'phone' => ['bail', 'required','integer'],
-            'Age' => ['bail', 'required','integer'],
+            'phone' => ['bail', 'required'],
+            'Age' => ['bail', 'integer'],
 
-            'type' => ['bail', 'required','integer','between:1,3'],
-            'commitments' => ['bail', 'required','integer'],
+            'type' => ['bail', 'integer','between:1,3'],
+            'commitments' => ['bail', 'integer'],
 
-            'bank' => ['bail','required', 'string', 'max:255'],
-            'salary' => ['bail', 'required','integer'],
+            'bank' => ['bail', 'string', 'max:255'],
+            'salary' => ['bail', 'integer'],
 
-            'supported' => ['bail', 'required','integer','between:1,2'],
-            'notes' => ['bail','required', 'string'],
+            'supported' => ['bail', 'integer','between:1,2'],
+            'notes' => ['bail', 'string'],
 
         ];
     }
