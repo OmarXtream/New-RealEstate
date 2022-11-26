@@ -1,5 +1,6 @@
         <!-- main-footer -->
         <footer class="main-footer">
+            @if(Request::is('/'))
             <div class="footer-top bg-color-2">
                 <div class="auto-container">
                     <div class="row clearfix">
@@ -53,6 +54,7 @@
                     </div>
                 </div>
             </div>
+            @endif
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
