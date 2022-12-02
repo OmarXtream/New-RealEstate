@@ -4,8 +4,11 @@
             <div class="header-lower">
                 <div class="outer-box">
                     <div class="main-box">
-                        <div class="logo-box" style="width:214px !important; height:170px !important;">
-                            <figure class="logo"><a href="{{ route('home') }}"><img style="width:214px !important; height:150px !important;" src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
+                        <div class="logo-box d-none d-md-block d-lg-block" style="width:214px !important; height:170px !important;">
+                            <figure class="logo"><a href="{{ route('home') }}"><img style="width:185px !important; height:135px !important;" src="{{asset('frontend/images/logo.png')}}" alt="logo"></a></figure>
+                        </div>
+                        <div class="logo-box d-block d-md-none d-lg-none" style="height:100px !important;">
+                            
                         </div>
                         <div class="menu-area clearfix">
                             <!--Mobile Navigation Toggler-->
@@ -86,8 +89,12 @@
                                 </div>
                             </nav>
                         </div>
-                        <div class="menu-right-content clearfix">
+                        <div class="menu-right-content clearfix d-block d-md-none d-lg-none">
                                     <ul class="navigation clearfix">
+                                        <div class="sign-box">
+                                            <a style="color:black !important" href="/"><img width="100px" height="40px" src="{{asset('frontend/images/logo.png')}}" alt="logo"></a>
+                                        </div>
+            
                             @guest
                             <div class="sign-box">
                                 <a href="{{route('login')}}"><i class="fas fa-user-plus"></i>دخول</a>
