@@ -34,8 +34,7 @@ class InfoFormController extends Controller
                 return redirect()->back()
                 ->withErrors(['حدث خطأ ما , حاول مره أخرى']);
             }else{
-                 return view('pages/thanks');
-            //   return redirect()->back()->with('message', 'شكرا لكم , سيتم التواصل معكم');
+                return redirect('/thanks');
 
             }
 
