@@ -89,12 +89,12 @@
                                 </div>
                             </nav>
                         </div>
-                        <div class="menu-right-content clearfix d-block d-md-none d-lg-none">
-                                    <ul class="navigation clearfix">
+                        <div class="menu-right-content clearfix">
+                                    <ul class="navigation clearfix d-block d-md-none d-lg-none">
                                         <div class="sign-box">
                                             <a style="color:black !important" href="/"><img width="100px" height="40px" src="{{asset('frontend/images/logo.png')}}" alt="logo"></a>
                                         </div>
-            
+                                    </ul>
                             @guest
                             <div class="sign-box">
                                 <a href="{{route('login')}}"><i class="fas fa-user-plus"></i>دخول</a>
