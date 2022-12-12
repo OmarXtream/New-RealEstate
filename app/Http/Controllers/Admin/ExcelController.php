@@ -32,7 +32,9 @@ class ExcelController extends Controller
 
         
         Toastr::success('message', 'تم رفع البيانات بنجاح.');
-        return back();
+
+
+        return redirect()->back()->with('message', 'تم رفع البيانات بنجاح');
     }
 
 
