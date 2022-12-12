@@ -44,7 +44,13 @@
                         <span>طلبات تسويق العقار</span>
                     </a>
                 </li>
-            
+                <li class="{{ Request::is('admin/excel*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.import.excel') }}">
+                        <i class="material-icons">upload</i>
+                        <span>رفع بيانات العقار</span>
+                    </a>
+                </li>
+
                 <li class="{{ Request::is('admin/features*') ? 'active' : '' }}">
                     <a href="{{ route('admin.features.index') }}">
                         <i class="material-icons">star</i>

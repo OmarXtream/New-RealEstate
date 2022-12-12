@@ -98,7 +98,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     
     Route::get('/PMarketing', 'PropertyController@Marakating')->name('PropertiesMarkating');
     
-    
+    Route::get('/excel','ExcelController@index')->name('import.excel');
+    Route::post('/excel','ExcelController@uploadContent')->name('import.excel.upload');
+
 
 });
 
