@@ -21,11 +21,17 @@
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
 
+                                        @guest
+                                        <li class="d-block d-md-none d-lg-none {{ Request::is('/') ? 'active' : '' }}">
+                                            <a href="{{ route('login') }}"><span>تسجيل الدخول</span></a>
+                                                                                    <hr>
+
+                                        </li>
+                                        @endguest
                                         <li class="{{ Request::is('/') ? 'active' : '' }}">
                                             <a href="{{ route('home') }}"><span>الرئيسية</span></a>
                                         </li>
-
-
+                                       
                                         <li class="{{ Request::is('property*') ? 'active' : '' }}">
                                             <a href="{{ route('property') }}"><span>العقارات</span></a>
                                         </li>
@@ -96,7 +102,7 @@
                                         </div>
                                     </ul>
                             @guest
-                            <div class="sign-box">
+                            <div class="sign-box d-none d-md-block d-lg-block">
                                 <a href="{{route('login')}}"><i class="fas fa-user-plus"></i>دخول</a>
                             </div>
                             @endguest
