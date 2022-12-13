@@ -146,7 +146,14 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-3"></i></div>
+                                            <h4>توفير العقار بالمواصفات المطلوبة</h4>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
                                     <div class="chooseus-block-one">
@@ -170,15 +177,6 @@
                                         <div class="inner-box">
                                             <div class="icon-box"><i class="icon-21"></i></div>
                                             <h4>توفير الدفعة الأولى للعقار</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                                    <div class="chooseus-block-one">
-                                        <div class="inner-box">
-                                            <div class="icon-box"><i class="icon-3"></i></div>
-                                            <h4>توفير العقار بالمواصفات المطلوبة</h4>
                                         </div>
                                     </div>
                                 </div>
