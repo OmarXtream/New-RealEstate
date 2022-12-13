@@ -48,7 +48,10 @@
                                 <span>رفع صورة</span>
                             </button>
                         </div>
-
+                        <h5 style="color: red">
+                            الرجاء رفع البنر بمقاسات 
+                            1600x480
+                        </h5>
                         <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                             <i class="material-icons">save</i>
                             <span>حفظ</span>
