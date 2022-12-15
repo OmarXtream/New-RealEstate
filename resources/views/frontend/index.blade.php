@@ -289,7 +289,6 @@
                                               <h4 dir="rtl">   {{ $property->price }} ريال </h4> 
                                     </div>
                                     <ul class="other-option pull-right clearfix">
-                                        <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-12"></i></a></li>
                                         <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-13"></i></a></li>
                                     </ul>
                                 </div>
