@@ -117,10 +117,82 @@
 
         <!-- main-footer end -->
 
-        <!--Scroll to top-->
+        {{-- <!--Scroll to top-->
         <button class="scroll-top scroll-to-target" data-target="html">
             <span class="fal fa-angle-up"></span>
-        </button>
+        </button> --}}
+        <div class="floating-chat text-right">
+            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+            <div class="chat">
+                <div class="header">
+                    <span class="title">
+                        البحث عن عقار
+                    </span>
+                    <button>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                                 
+                </div>
+                <div class="messages">
+                    <form action="{{ route('search')}} " method="GET" class="search-form">
+                        <input name="purpose" type="hidden" value="بيع">
+                        <div class="row clearfix">
+
+                        <div class="col-12 column mb-2">
+                            <div class="form-group">
+                                <div class="select-box">
+                                    <select class="form-control" name="bedroom" class="wide">
+                                       <option value="" disabled selected>عدد الغرف</option>
+                                       @if(isset($bedroomdistinct))
+                                            @foreach($bedroomdistinct as $bedroom)
+                                                <option value="{{$bedroom->bedroom}}">{{$bedroom->bedroom}}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 column mb-2">
+                            <div class="form-group">
+                                <div class="select-box">
+                                    <select class="form-control" name="type" class="wide">
+                                       <option value="" data-display=" نوع العقار" disabled selected>نوع العقار </option>
+                                       <option value="شقة">شقة</option>
+                                       <option value="بيت">بيت</option>
+                                       <option value="ملحق">ملحق</option>
+                                       <option value="عمارة">عمارة</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-12 column">
+                                <div class="form-group">
+                                    <div class="field-input">
+                                        <input class="form-control" type="search" name="city" placeholder="مدينة-منطقة">
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="col-12 column">
+                                <div class="form-group">
+                                    <div class="field-input">
+                                        <input class="form-control" type="search" name="maxprice" placeholder="اعلى سعر مطلوب">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        
+                <div class="footer">
+                    <button id="sendMessage" class="btn btn-secondary" type="submit"><i class="fas fa-search"></i>  بحث</button>
+                </form>
+            </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
