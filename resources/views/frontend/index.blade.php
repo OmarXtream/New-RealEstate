@@ -463,11 +463,11 @@
                     </div>
                 </section>
         <!-- testimonial-style-two -->
-        <section class="testimonial-style-two" style="background-image: url({{asset('frontend/images/shape/shape-1.png')}});">
+        <section class="testimonial-style-two" style="background-color:#1B1D21;">
             <div class="auto-container">
                 <div class="sec-title" style="text-align: center">
                     <h5>الشهائد والتوصيات</h5>
-                    <h2>ماذا يقول عنا عملائنا؟</h2>
+                    <h2 style="color: #fff">ماذا يقول عنا عملائنا؟</h2>
                 </div>
                 <div class="row clearfix">
                     <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 inner-column">
