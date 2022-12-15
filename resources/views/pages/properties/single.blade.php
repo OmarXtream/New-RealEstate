@@ -73,7 +73,6 @@
                     <h3>{{ $property->title }}</h3>
                     <div class="author-info clearfix">
                         <div class="author-box pull-left">
-                            <figure class="author-thumb"><img src="{{asset('frontend/images/feature/author-1.jpg')}}" alt=""></figure>
                             <h6>{{ $property->address }} <i class="fa fa-location"></i></h6>
                         </div>
                         @if($property->featured == 1)
