@@ -4,17 +4,7 @@
             <div class="footer-top bg-color-2">
                 <div class="auto-container">
                     <div class="row clearfix">
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget about-widget">
-                                <div class="widget-title">
-                                    <h3>موقعنا</h3>
-                                </div>
-
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.2197689597906!2d39.19769001494197!3d21.577342985703815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x740d236ab452f26d!2zMjHCsDM0JzM4LjQiTiAzOcKwMTEnNTkuNiJF!5e0!3m2!1sen!2ssa!4v1670094031187!5m2!1sen!2ssa" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget ml-70">
                                 <div class="widget-title">
                                     <h3>القائمة</h3>
@@ -53,7 +43,7 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget post-widget">
                                 <div class="widget-title">
                                     <h3>العقارات الأخيرة</h3>
@@ -71,7 +61,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget ml-70">
                                 <div class="widget-title">
                                     <h3>التواصل الاجتماعي</h3>
