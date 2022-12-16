@@ -2,18 +2,12 @@
 
 @section('content')
               <!--Page Title-->
-              <section class="page-title-two bg-color-1 centred mt-5">
+              <section class="page-title-two bg-color-1 centred">
             <div class="pattern-layer">
                 <div class="pattern" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
              </div>
             <div class="auto-container">
                 <div class="content-box clearfix">
-                <br>
-                    <br>      
-                    <br>
-                    <br>
-                    <br>      
-                    <br>
                     <h1>طلب عقار</h1>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{{route('home')}}">الرئيسية</a></li>
