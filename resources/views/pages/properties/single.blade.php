@@ -48,7 +48,7 @@
 @endsection
 
 @section('content')
-<section class="page-title-two bg-color-1 centred">
+<section class="page-title-two bg-color-1 centred rtl">
     <div class="pattern-layer">
         <div class="pattern-1" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
         <div class="pattern-2" style="background-image: url(frontend/images/shape/shape-10.png);"></div>
@@ -69,7 +69,7 @@
         @endif
         <div class="auto-container">
             <div class="top-details clearfix">
-                <div class="left-column pull-left clearfix">
+                <div class="left-column text-center clearfix">
                     <h3>{{ $property->title }}</h3>
                     <div class="author-info clearfix">
                         <div class="author-box pull-left">
@@ -83,14 +83,16 @@
 
                     </div>
                 </div>
-                <div class="right-column pull-right clearfix">
+                <div class="right-column pull-right clearfix" dir="rtl">
                     <div class="price-inner clearfix">
+
                         <ul class="category clearfix pull-left px-auto">
-                            <li><a href="#">{{ $property->purpose }}</a></li>
-                            <li><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span></li>
-                            <li><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span></li>
-                            <li><span class="btn btn-small disabled b-r-20">المساحة الارضية: {{ $property->area}} متر مربع</span></li>
-                            <li><span class="btn btn-small disabled b-r-20">المدينة: {{ $property->city}}</span></li>
+                            <li class="float-right"><a href="#">{{ $property->purpose }}</a></li>
+                            <li class="float-right"><span class="btn btn-small disabled b-r-20">التعليقات: {{ $property->comments_count }}</span></li>
+                            <li class="float-right"><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}}</span></li>
+                            <li class="float-right "><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}}</span></li>
+                            <li class="float-right"><span class="btn btn-small disabled b-r-20">المساحة: {{ $property->area}}</span></li>
+                            <li class="float-right"><span class="btn btn-small disabled b-r-20">المدينة: {{ $property->city}}</span></li>
 
 
                         </ul>
@@ -134,6 +136,8 @@
                                 <div class="single-image">
                                     @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
                                     <figure class="image-box"><img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></figure>
+                                    @else
+                                    <figure class="image-box"><img src="{{$property->image}}" alt="{{$property->title}}"></figure>
                                     @endif
                                 </div>
                             @endif
@@ -285,7 +289,7 @@
                                     <h4>{{ $property->user->name }}</h4>
                                     <ul class="info clearfix">
                                         <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->email }}</li>
-                                        <li><a href="{{ route('agents.show',$property->agent_id) }}">التواصل مع الوسيط</a></li>
+                                        {{-- <li><a href="{{ route('agents.show',$property->agent_id) }}">التواصل مع الوسيط</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
