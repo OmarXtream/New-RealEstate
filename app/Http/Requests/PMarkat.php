@@ -27,14 +27,14 @@ class PMarkat extends FormRequest
             'name' => ['bail','required', 'string', 'max:255'],
             'phone' => ['bail', 'required','integer'],
 
-            'type' => ['bail', 'string', 'max:255'],
-            'city' => ['bail', 'string', 'max:255'],
+            // 'type' => ['bail', 'string', 'max:255'],
+            // 'city' => ['bail', 'string', 'max:255'],
 
-            'rooms' => ['bail', 'integer'],
-            'baths' => ['bail', 'integer'],
-            'price' => ['bail', 'integer'],
+            // 'rooms' => ['bail', 'integer'],
+            // 'baths' => ['bail', 'integer'],
+            // 'price' => ['bail', 'integer'],
             
-            'details' => ['bail', 'string'],
+            // 'details' => ['bail', 'string'],
 
         ];
     }

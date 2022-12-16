@@ -63,10 +63,10 @@
                                     @csrf
                                             <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="الإسم">
+                                            <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="* الإسم" required>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="رقم الهاتف">
+                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="* رقم الهاتف" required>
                                         </div>
                                     </div>
                             </div>
@@ -108,9 +108,9 @@
                             <div class="form-inner">
                                     <div class="row clearfix">
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea id="details" name="details" class="form-control">{{ old('details') }} </textarea>
+                                            <textarea id="details" name="details" class="form-control" placeholder="تفاصيل إضافيه">{{ old('details') }}</textarea>
                                         </div>
-                                    </div>
+                                        </div>
                             </div>
                         </div>
                     </div>
