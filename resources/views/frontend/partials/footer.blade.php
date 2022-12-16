@@ -61,23 +61,36 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column mt-5">
                             <div class="footer-widget links-widget ml-70">
-                                <div class="widget-title">
-                                    <h3>التواصل الاجتماعي</h3>
-                                </div>
                                 <div class="widget-content">
-                                    <ul class="links-list class">
-                                        <li class="uppercase">
-                                            <h5 class="mt-2"><a href="https://www.instagram.com/roshemcompany/" target="_blank"><i class="fab fa-instagram fa-lg"></i> إنستقرام</a></h5>
-                                            <h5 class="mt-2"><a href="https://www.twitter.com/roshemcompany/" target="_blank"><i class="fab fa-twitter fa-lg"></i> تويتر</a></h5>
-                                            <h5 class="mt-2"><a href="https://www.snapchat.com/add/roshemcompany" target="_blank"><i class="fab fa-snapchat fa-lg"></i> سناب شات</a></h5>
+                                    
+                                    <div class="team-block-one">
+                                        <div class="inner-box" >
+                                            <figure class="image-box"><img src="assets/images/team/team-3.jpg" alt=""></figure>
+                                            <div class="lower-content">
+                                                <div class="inner" dir="ltr" style="background-color:#1b1d21 !important;">
+                                                    <h3 class="mb-4" style="color:#fff">التواصل الاجتماعي</h3>
+                                                    <ul class="social-links clearfix">
+                                                        <center>
+                                                        <li><a href="https://www.instagram.com/roshemcompany/" target="_blank"><i class="fab fa-instagram" dir="rtl"></i> </a></li>
+                                                        <li><a href="https://www.twitter.com/roshemcompany/" target="_blank"><i class="fab fa-twitter" dir="rtl"></i> </a></li>
+                                                        <li><a href="https://www.snapchat.com/add/roshemcompany" target="_blank"><i class="fab fa-snapchat" dir="rtl"></i></a></li>
+                        
+                                                        {{-- <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
+                                                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+                                                        <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li> --}}
+                                                    </center>
+                                                    </ul>
+                                                    <hr>
+                                                    <li><a href="#" target="_blank"> :التواصل <i class="fa fa-phone"></i><br>   0531852852 <br> 0531853853  </a></li>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>      
 
-                                            <h5 class="mt-2"><a href="#" target="_blank"><i class="fa fa-phone fa-lg"></i> التواصل:   0531852852 0531853853 </a></h5>
-
-                                        </li>
-                                     </ul>
-                                </div>
+                                     </div>
                             </div>
                         </div>
 
