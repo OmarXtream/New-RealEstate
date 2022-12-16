@@ -34,7 +34,7 @@
             
             @if(Session::has('errors'))
             <div class="text-center alert alert-light">
-                <h5 style="font-weight: bold;color:black">فضلاً قم بملىء كل الحقول</h5>
+              <h5 style="font-weight: bold;">* فضلاً قم بملىء كل الحقول</h5>
   
             @if($errors->any())
             {!! implode('', $errors->all('<li><p style="color:red">:message</p></li>')) !!}

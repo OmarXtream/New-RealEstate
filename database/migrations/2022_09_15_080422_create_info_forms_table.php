@@ -19,9 +19,11 @@ class CreateInfoFormsTable extends Migration
             $table->String('phone');
             $table->integer('type')->comment('1 => military , 2=> civil , 3 => private')->nullable();
 
+            $table->String('Age')->nullable();
+
             $table->String('commitments')->nullable();
             $table->String('bank')->nullable();
-            $table->integer('salary')->nullable();
+            $table->String('salary')->nullable();
 
             $table->integer('supported')->comment('1 => no , 2=> yes ')->nullable();
 

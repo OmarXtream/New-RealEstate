@@ -24,7 +24,7 @@
         <section class="contact-section">
             @if(Session::has('errors'))
             <div class="text-center alert alert-light">
-              <h5 style="font-weight: bold;">فضلاً قم بملىء كل الحقول</h5>
+              <h5 style="font-weight: bold;">* فضلاً قم بملىء كل الحقول</h5>
             </div>
             @endif
             @if (session()->has('message'))
@@ -48,17 +48,17 @@
                                     @csrf
                                             <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="الإسم">
+                                            <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="* الإسم">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="رقم الهاتف">
+                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="* رقم الهاتف">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <input class="form-control" id="Age" name="Age" type="number"  value="{{ old('Age') }}" placeholder="العمر">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <select name="type" class="browser-default form-control">
-                                                <option value="" disabled selected>قطاع الوظيفة</option>
+                                                <option value="" disabled selected> * قطاع الوظيفة</option>
                                                 <option value="1">قطاع عسكري</option>
                                                 <option value="2">قطاع مدني</option>
                                                 <option value="3">قطاع خاص</option>
@@ -86,7 +86,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <select name="supported" class="browser-default form-control">
-                                                <option value="" disabled selected>مدعوم من سكني؟</option>
+                                                <option value="" disabled selected>* مدعوم من سكني؟</option>
                                                 <option value="1">لا</option>
                                                 <option value="2">نعم</option>
             
@@ -94,7 +94,7 @@
                                                     </div>
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea placeholder="الملاحظات" id="notes" name="notes" class="form-control">{{ old('notes') }} </textarea>
+                                            <textarea id="notes" name="notes" class="form-control" placeholder="تفاصيل إضافيه">{{ old('notes') }}</textarea>
                                         </div>
             
                                     </div>
