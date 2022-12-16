@@ -4,8 +4,8 @@
             <div class="header-lower">
                 <div class="outer-box">
                     <div class="main-box">
-                        <div class="logo-box d-none d-md-block d-lg-block" style="width:214px !important; height:170px !important;">
-                            <figure class="logo"><a href="{{ route('home') }}"><img style="width:185px !important; height:135px !important;" src="{{asset('frontend/images/logo.png')}}" alt="logo"></a></figure>
+                        <div class="logo-box d-none d-md-block d-lg-block">
+                            <figure class="logo"><a href="{{ route('home') }}"><img src="{{asset('frontend/images/logo.png')}}" alt="logo"></a></figure>
                         </div>
                         <div class="logo-box d-block d-md-none d-lg-none" style="height:100px !important;">
                             
