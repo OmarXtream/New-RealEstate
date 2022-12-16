@@ -38,7 +38,7 @@
 
                                     @foreach($cities as $city)
                                     <div class="buy-btn pull-right text-center"><a class="category" href="{{ route('property.city',$city->city_slug) }}"><h4 class="category">{{ $city->city }}</h4></a></div>
-                                    <hr>
+                                    <br>
                                 @endforeach
             
                                 </div>
