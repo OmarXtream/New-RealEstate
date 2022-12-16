@@ -55,13 +55,13 @@
                                         <div class="inner-box">
         
                                             @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                            <div class="image-box">
-                                                <figure class="image"><img class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></figure>
+                                            <div class="image-box img-fluid" style="height: 100%">
+                                                <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></a>
                                                 <div class="batch"><i class="icon-11"></i></div>
                                             </div>
                                             @else
                                             <div class="image-box">
-                                                <figure class="image"><img src="frontend/images/resource/deals-3.jpg" alt=""></figure>
+                                                <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{$property->image}}" alt="{{$property->title}}"></a>
                                                 <div class="batch"><i class="icon-11"></i></div>
                                             </div>
         

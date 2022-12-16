@@ -65,8 +65,8 @@
                     <div class="blog-details-content">
                         <div class="news-block-one">
                             <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image img-fluid" style="height: 400px;"><img src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></figure>
+                                <div class="image-box img-fluid" style="height: 100%">
+                                    <figure class="image img-fluid" style="height: 400px;"><img style="height: 100%" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></figure>
                                     <span class="category">تدوينة حديثه</span>
                                 </div>
                                 <div class="lower-content">
