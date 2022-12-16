@@ -27,18 +27,18 @@ class PRequest extends FormRequest
             'name' => ['bail','required', 'string', 'max:255'],
             'phone' => ['bail', 'required'],
 
-            'type' => ['bail', 'string', 'max:255'],
-            'city' => ['bail', 'string', 'max:255'],
+            // 'type' => ['bail', 'string', 'max:255'],
+            // 'city' => ['bail', 'string', 'max:255'],
 
-            'rooms' => ['bail', 'integer'],
-            'baths' => ['bail', 'integer'],
+            // 'rooms' => ['bail', 'integer'],
+            // 'baths' => ['bail', 'integer'],
 
-            'first_district' => ['bail', 'string', 'max:255'],
-            'Second_district' => ['bail', 'string', 'max:255'],
-            'Third_district' => ['bail', 'string', 'max:255'],
-            'Fourth_district' => ['bail', 'string', 'max:255'],
+            // 'first_district' => ['bail', 'string', 'max:255'],
+            // 'Second_district' => ['bail', 'string', 'max:255'],
+            // 'Third_district' => ['bail', 'string', 'max:255'],
+            // 'Fourth_district' => ['bail', 'string', 'max:255'],
 
-            'details' => ['bail', 'string'],
+            // 'details' => ['bail', 'string'],
 
         ];
     }
