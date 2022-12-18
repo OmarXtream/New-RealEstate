@@ -120,10 +120,10 @@
 
         <!-- main-footer end -->
 
-        {{-- <!--Scroll to top-->
+       <!--Scroll to top-->
         <button class="scroll-top scroll-to-target" data-target="html">
             <span class="fal fa-angle-up"></span>
-        </button> --}}
+        </button> 
 
         @if(Request::is('/'))
 

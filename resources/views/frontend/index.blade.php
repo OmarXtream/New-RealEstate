@@ -12,7 +12,7 @@
 	 justify-content: center;
 	 color: white;
 	 position: fixed;
-	 bottom: 10px;
+	 bottom: 120px;
 	 right: 10px;
 	 width: 80px;
 	 height: 80px;
@@ -24,6 +24,7 @@
 	 background: -webkit-linear-gradient(-45deg, #2dbe6c 0, #2dbe6c 25%, #2dbe6c 50%, #2dbe6c 75%, #2dbe6c 100%);
 	 background-repeat: no-repeat;
 	 background-attachment: fixed;
+     margin-right: 5px;
 }
  .floating-chat.enter:hover {
 	 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
