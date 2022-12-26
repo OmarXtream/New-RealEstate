@@ -18,7 +18,7 @@ class PropertiesImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-        return new Property([
+         $property = new Property([
         'title' => $row['title'],
         'slug' => str_slug($row['title']),
         'price' => $row['price'],
@@ -36,6 +36,22 @@ class PropertiesImport implements ToModel,WithHeadingRow
         'video' => $row['video'],
         'floor_plan' => $row['floor_plan'],
         ]);
+        $property->save();
+        //upload multiple imgs
+        $imgArray = explode(',', $row['imgs']);
+        foreach ($imgArray as $img)
+        {
+        if(!empty($img)){
+            $property->gallery()->create([
+                'property_id' => $property->id,
+                'name' => $img,
+            ]);
+        }
+
+        }
+
+
+        return $property;
 
     }
 }
