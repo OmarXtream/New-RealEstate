@@ -736,7 +736,7 @@ img {
 
 .main-header .logo-box{
   position: relative;
-  padding: 27.5px 0px;
+  /* padding: 27.5px 0px; */
 }
 
 .main-header .logo-box .logo{
@@ -767,7 +767,7 @@ img {
   position:inherit;
   float:left;
   z-index:2;
-  padding:40px 0px;
+  /* padding:40px 0px; */
   -webkit-transition:all 300ms ease;
   -moz-transition:all 300ms ease;
   -ms-transition:all 300ms ease;
@@ -1487,11 +1487,11 @@ div#mCSB_1_container{
 }
 
 .main-header .sticky-header .logo-box{
-  padding: 15.5px 0px !important;
+  padding: 8px 0px !important;
 }
 
 .main-header .sticky-header .navigation > li{
-  padding: 25px 0px !important;
+  padding: 8px 0px !important;
 }
 
 .main-header .sticky-header .menu-right-content{

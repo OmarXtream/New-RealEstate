@@ -4,7 +4,7 @@
             <div class="header-lower">
                 <div class="outer-box">
                     <div class="main-box">
-                        <div class="logo-box d-none d-md-block d-lg-block">
+                        <div class="logo-box d-none d-md-block d-lg-block" style="width:64px;">
                             <figure class="logo"><a href="{{ route('home') }}"><img src="{{asset('frontend/images/logo.png')}}" alt="logo"></a></figure>
                         </div>
                         <div class="logo-box d-block d-md-none d-lg-none" style="height:100px !important;">
