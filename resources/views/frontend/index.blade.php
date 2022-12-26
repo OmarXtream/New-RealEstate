@@ -507,61 +507,56 @@
         <!-- testimonial-style-two end -->
 
 
-        <!-- clients-section -->
-        <section class="clients-section bg-color-1">
-            <div class="pattern-layer" style="background-image: url(frontend/images/shape/shape-1.png);"></div>
+        <section class="testimonial-section bg-color-1 centred" id="testimonial">
+            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-1.png);"></div>
             <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-lg-4 col-md-12 col-sm-12 title-column">
-                        <div class="sec-title">
-                            <h5>شركائنا</h5>
-                            <h2>في روشم نفتخر بشركاء النجاح الذين يقدمون الدعم لنا في المشاريع العقارية والتجارية المختلفة .</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
-                        <div class="clients-logo">
-                            <ul class="logo-list clearfix">
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/1.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/2.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/3.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/4.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/5.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/6.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/7.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/8.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/9.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/10.png')}}" alt=""></a></figure>
-                                </li>
-                                <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/11.png')}}" alt=""></a></figure>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="sec-title">
+                    <h5>شركائنا</h5>
+                    <h2>في روشم نفتخر بشركاء النجاح الذين يقدمون الدعم لنا في المشاريع العقارية والتجارية المختلفة</h2>
                 </div>
+                <div class="single-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <div class="row">
+                                <div class="col-4"><img src="{{asset('frontend/partners/1.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/2.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/3.png')}}" alt=""></div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <div class="row">
+                                <div class="col-4"><img src="{{asset('frontend/partners/4.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/5.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/6.png')}}" alt=""></div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <div class="row">
+                                <div class="col-4"><img src="{{asset('frontend/partners/7.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/8.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/9.png')}}" alt=""></div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <div class="row">
+                                <div class="col-4"><img src="{{asset('frontend/partners/10.png')}}" alt=""></div>
+                                <div class="col-4"><img src="{{asset('frontend/partners/11.png')}}" alt=""></div>
+                            </div>
+                            </div>
+                    </div>
+
+
+                </div>
+
             </div>
         </section>
-        <!-- clients-section end -->
+
 
 
 
