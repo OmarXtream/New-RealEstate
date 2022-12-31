@@ -26,9 +26,11 @@ class ExcelController extends Controller
     public function uploadContent(Request $request){
          $file = $request->file('uploaded_file');
         
-
+        try{
         Excel::import(new PropertiesImport, $file);
-
+        } catch (Exception $e) {
+            // return redirect()->back()->with('message', 'حدث خطأ ما ');
+        }        
 
         
         Toastr::success('message', 'تم رفع البيانات بنجاح.');
