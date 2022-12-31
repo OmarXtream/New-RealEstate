@@ -20,8 +20,8 @@
 	 transition: all 250ms ease-out;
 	 border-radius: 50%;
 	 opacity: 0;
-	 background: -moz-linear-gradient(-45deg, #2dbe6c 0, #2dbe6c 25%, #2dbe6c 50%, #2dbe6c 75%, #2dbe6c 100%);
-	 background: -webkit-linear-gradient(-45deg, #2dbe6c 0, #2dbe6c 25%, #2dbe6c 50%, #2dbe6c 75%, #2dbe6c 100%);
+	 background: -moz-linear-gradient(-45deg, #114962 0, #114962 25%, #114962 50%, #114962 75%, #114962 100%);
+	 background: -webkit-linear-gradient(-45deg, #114962 0, #114962 25%, #114962 50%, #114962 75%, #114962 100%);
 	 background-repeat: no-repeat;
 	 background-attachment: fixed;
      margin-right: 5px;

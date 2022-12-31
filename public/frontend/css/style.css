@@ -2829,7 +2829,7 @@ div#mCSB_1_container{
 }
 
 .chooseus-block:nth-child(2) .chooseus-block-one .inner-box .icon-box{
-  color: #2dbe6c;
+  color: #114962;
 }
 
 .chooseus-block:last-child .chooseus-block-one .inner-box .icon-box{
@@ -8463,7 +8463,7 @@ div#mCSB_1_container{
 }
 
 .properties-section tbody tr td p i.yes{
-  color: #2dbe6c;
+  color: #114962;
 }
 
 .properties-section tbody tr td p i.no{
@@ -8909,11 +8909,11 @@ div#mCSB_1_container{
 }
 
 .myprofile-section .other-option .radio-box input[type="checkbox"]:checked + label:before {
-  border: 2px solid #2dbe6c;
+  border: 2px solid #114962;
 }
 
 .myprofile-section .other-option .radio-box input[type="checkbox"]:checked + label:after {
-  background-color: #2dbe6c;
+  background-color: #114962;
 }
 
 .myprofile-section .property-details h6{
