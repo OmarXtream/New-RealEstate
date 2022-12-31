@@ -18,6 +18,9 @@ class PropertiesImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
+
+        try{
+
          $property = new Property([
         'title' => $row['title'],
         'slug' => str_slug($row['title']),
@@ -52,6 +55,9 @@ class PropertiesImport implements ToModel,WithHeadingRow
 
 
         return $property;
+    } catch (Exception $e) {
+        // return redirect()->back()->with('message', 'حدث خطأ ما ');
+    }        
 
     }
 }
