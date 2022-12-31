@@ -112,6 +112,9 @@
                             © 2022 Developer puzzle.
                         @endif
                             </div>
+                            <ul class="footer-nav pull-right clearfix">
+                                <li><a href="{{ route('policy') }}">سياسة الخصوصية</a></li>
+                            </ul>
                                     </div>
                 </div>
             </div>

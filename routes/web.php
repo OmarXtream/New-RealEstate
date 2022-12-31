@@ -4,6 +4,10 @@
 Route::get('/', 'FrontpageController@index')->name('home');
 Route::get('/slider', 'FrontpageController@slider')->name('slider.index');
 
+Route::get('policy', function(){
+    return view('pages.policy');
+})->name('policy');
+
 Route::get('/InfoForm', 'InfoFormController@index')->name('InfoForm');
 Route::post('/InfoForm', 'InfoFormController@Create')->name('InfoForm.create');
 
