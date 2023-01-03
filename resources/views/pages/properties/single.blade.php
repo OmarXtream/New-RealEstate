@@ -48,16 +48,15 @@
 @endsection
 
 @section('content')
-<section class="page-title-two bg-color-1 centred rtl">
+<section class="page-title-two bg-color-1 centred mt-5">
     <div class="pattern-layer">
-        <div class="pattern-1" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
-        <div class="pattern-2" style="background-image: url(frontend/images/shape/shape-10.png);"></div>
-    </div>
+        <div class="pattern" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
+     </div>
     <div class="auto-container">
         <div class="content-box clearfix">
-            <h1>{{ $property->title }}</h1>
-        </div>
-    </div>
+    <h1>{{ $property->title }}</h1>
+</div>
+</div>
 </section>
 
     <!-- SINGLE PROPERTY SECTION -->
@@ -90,7 +89,7 @@
                             <li class="float-right"><a href="#">{{ $property->purpose }}</a></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">التعليقات: {{ $property->comments_count }}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}}</span></li>
-                            <li class="float-right "><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}}</span></li>
+                            <li class="float-right"><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">المساحة: {{ $property->area}}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">المدينة: {{ $property->city}}</span></li>
 
@@ -159,9 +158,11 @@
                                 <h4>مميزات العقار</h4>
                             </div>
                             <div class="text">
+                                <center>
                                 @foreach($property->features as $feature)
                                 <p>{{$feature->name}}</p>
                                 @endforeach
+                            </center>
                             </div>
                         </div>
                         @endif
@@ -184,7 +185,9 @@
                                 <h4>مقطع فيديو للعقار</h4>
                             </div>
                             <div class="text">
+                                <center>
                                 {!! $videoembed !!}
+                            </center>
                             </div>
                         </div>
                         @endif
@@ -284,16 +287,13 @@
                     <div class="property-sidebar default-sidebar">
                         <div class="author-widget sidebar-widget">
                             <div class="author-box">
-                                <figure class="author-thumb"><img src="{{Storage::url('users/'.$property->user->image)}}" alt=""></figure>
                                 <div class="inner">
-                                    <h4>{{ $property->user->name }}</h4>
-                                    <ul class="info clearfix">
-                                        <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->email }}</li>
-                                        {{-- <li><a href="{{ route('agents.show',$property->agent_id) }}">التواصل مع الوسيط</a></li> --}}
-                                    </ul>
+                                    <h3 class="font-weight-bold">طلب العقار</h3>
                                 </div>
                             </div>
                             <div class="form-inner">
+                                <p class="text-center mx-auto mb-2" dir="rtl">فضلاً قم بكتابة تفاصيل طلبك للعقار </p>
+
                                 <form class="default-form agent-message-box" action="" method="POST">
                                     @csrf
                                     <input type="hidden" name="agent_id" value="{{ $property->user->id }}">
@@ -310,7 +310,7 @@
                                         <input type="number" name="phone" placeholder="رقم الهاتف" required="">
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="message" placeholder="الرسالة"></textarea>
+                                        <textarea name="message" placeholder=" (اسم العقار وتفاصيل طلبه) "></textarea>
                                     </div>
                                     <div class="form-group message-btn">
                                         <button id="msgsubmitbtn" type="submit" class="theme-btn btn-one">إرسال</button>
