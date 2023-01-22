@@ -77,6 +77,7 @@
                                                         <li><a href="https://www.twitter.com/roshemcompany/" target="_blank"><i class="fab fa-twitter" dir="rtl"></i> </a></li>
                                                         <li><a href="https://www.snapchat.com/add/roshemcompany" target="_blank"><i class="fab fa-snapchat" dir="rtl"></i></a></li>
                                                         <li><a href="https://www.tiktok.com/@roshemcompany" target="_blank"><img src="https://d.top4top.io/p_2578y1a0p1.png"></a></li>
+                                                        <li><a href="https://www.facebook.com/people/roshemcompany/100087543796287/" target="_blank"><i class="fab fa-facebook-f" dir="rtl"></i> </a></li>
 
 
                                                         
