@@ -386,7 +386,7 @@
                     <div class="auto-container">
                         <div class="upper-box clearfix">
                             <div class="sec-title">
-                                <h5>خدماتنا</h5>
+                                <h5>مميزاتنا </h5>
                                 <h2>لماذا تختارنا؟</h2>
                             </div>
                         </div>
@@ -456,17 +456,19 @@
                             <h5>من نحن</h5>
                             <h2> روشم للتطوير العقاري</h2>
                         </div>
-                        <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <h3>الرؤية</h3>
+                        <div class="row gx-5">
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-3">
+                            
+                                    <h3><i class="fa fa-eye fa-lg"></i> الرؤية</h3>
                                     <p class="grey-text text-lighten-4 mt-2 text-justify">
                                         روشم للتطوير العقاري منذ تأسيسها أثرت روشم للتطوير العقاري السوق العقاري بممارسة عقارية فريدة أحدثت نقلة نوعية في سوق العقار المحلي من خلال تنفيذ وإنجاز المشاريع العملاقة فحازت بذلك على رضا عملائها وثقتهم من خلال نجاحها بتنفيذ وإنجاز العديد من المشاريع والاستثمارات العقارية الكبيرة داخل المملكة 
                                     </p>
-                         </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-3"></div>
+                        
+                    <div class="col-lg-4 col-md-4 col-sm-12 p-3">
 
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                    <h3>الهدف</h3>
+                                    <h3><i class="fa fa-bullseye fa-lg"></i> الهدف</h3>
                                     <p class="grey-text text-lighten-4 mt-2 text-justify">
                                         تهدف روشم للتطوير العقاري من خلال سلسلة الأنشطة العقارية التي تمارسها الى تقديم خدماتها في كل مجالات التطوير والاستثمار العقاري مثل التطوير العقاري والتخطيط والتسويق واثراء السوق العقاري في المملكة العربية السعودية طبقا للمعايير والمواصفات القياسية العالمية للجودة مع كامل الحرص على مواكبة التطور الذي تشهده بلادنا الغالية والمتمثل برؤية المملكة ٢٠٣٠ والتي تطمح المملكة من خلاها للوصول لأفضل عشر دول على المستوى الاقتصادي. 
                                     </p>
@@ -480,7 +482,7 @@
         <section class="testimonial-style-two" style="background-color:#1B1D21;">
             <div class="auto-container">
                 <div class="sec-title" style="text-align: center">
-                    <h5>الشهائد والتوصيات</h5>
+                    {{-- <h5>الشهائد والتوصيات</h5> --}}
                     <h2 style="color: #fff">ماذا يقول عنا عملائنا؟</h2>
                 </div>
                 <div class="row clearfix">
