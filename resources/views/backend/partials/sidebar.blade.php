@@ -58,12 +58,12 @@
                     </a>
                 </li>
 
-                <li class="{{ Request::is('admin/services*') ? 'active' : '' }}">
+                {{-- <li class="{{ Request::is('admin/services*') ? 'active' : '' }}">
                     <a href="{{ route('admin.services.index') }}">
                         <i class="material-icons">wb_sunny</i>
                         <span>الخدمات</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="{{ Request::is('admin/testimonials*') ? 'active' : '' }}">
                     <a href="{{ route('admin.testimonials.index') }}">
