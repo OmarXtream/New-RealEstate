@@ -16,6 +16,7 @@ class CreateInfoFormsTable extends Migration
         Schema::create('info_forms', function (Blueprint $table) {
             $table->increments('id');
             $table->String('name');
+            $table->String('email');
             $table->String('phone');
             $table->integer('type')->comment('1 => military , 2=> civil , 3 => private')->nullable();
 

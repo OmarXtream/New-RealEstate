@@ -17,6 +17,8 @@ class CreatePropertiesMarkatingsTable extends Migration
             $table->increments('id');
 
             $table->string('name');
+            $table->String('email');
+
             $table->integer('phone');
 
             $table->string('type')->nullable();

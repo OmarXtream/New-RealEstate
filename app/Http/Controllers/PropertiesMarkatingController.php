@@ -21,6 +21,7 @@ class PropertiesMarkatingController extends Controller
         $Form = PropertiesMarkating::create([
             'name' => $request['name'],
             'phone' => $request['phone'],
+            'email' => $request['email'],
             'type' => $request['type'],
             'city' => $request['city'],
             'rooms' => $request['rooms'],

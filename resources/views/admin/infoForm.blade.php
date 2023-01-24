@@ -24,6 +24,7 @@
                                 <tr>
                                     <th>الإسم</th>
                                     <th>رقم الهاتف</th>
+                                    <th>البريد الإلكتروني</th>
                                     <th>العمر</th>
                                     <th>القطاع</th>
                                     <th>الإلتزامات الشخصية</th>
@@ -38,6 +39,7 @@
                                 <tr>
                                     <td>{{$info->name}}</td>
                                     <td>{{$info->phone}}</td>
+                                    <td>{{$info->email}}</td>
                                     <td>{{$info->Age}}</td>
                                     <td>{{$info->typeText()}}</td>
 

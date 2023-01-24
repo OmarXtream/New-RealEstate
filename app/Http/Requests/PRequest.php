@@ -26,6 +26,7 @@ class PRequest extends FormRequest
         return [
             'name' => ['bail','required', 'string', 'max:255'],
             'phone' => ['bail', 'required'],
+            'email' => ['bail','required', 'string','email', 'max:255'],
 
             // 'type' => ['bail', 'string', 'max:255'],
             // 'city' => ['bail', 'string', 'max:255'],

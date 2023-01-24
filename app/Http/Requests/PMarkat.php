@@ -26,6 +26,7 @@ class PMarkat extends FormRequest
         return [
             'name' => ['bail','required', 'string', 'max:255'],
             'phone' => ['bail', 'required','integer'],
+            'email' => ['bail','required', 'string','email', 'max:255'],
 
             // 'type' => ['bail', 'string', 'max:255'],
             // 'city' => ['bail', 'string', 'max:255'],

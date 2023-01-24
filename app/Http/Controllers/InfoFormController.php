@@ -20,6 +20,7 @@ class InfoFormController extends Controller
     {
         $Form = InfoForm::create([
             'name' => $request['name'],
+            'email' => $request['email'],
             'phone' => $request['phone'],
             'Age' => $request['Age'],
             'type' => $request['type'],

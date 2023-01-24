@@ -25,6 +25,7 @@ class InfoRequest extends FormRequest
     {
         return [
             'name' => ['bail','required', 'string', 'max:255'],
+            'email' => ['bail','required', 'string','email', 'max:255'],
             'phone' => ['bail', 'required'],
             // 'Age' => ['bail', 'integer'],
 

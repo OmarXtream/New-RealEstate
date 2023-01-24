@@ -24,6 +24,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>الإسم</th>
+                                    <th>البريد الإلكتروني</th>
                                     <th>رقم الهاتف</th>
                                     <th>النوع</th>
 
@@ -40,6 +41,7 @@
                                 <tr>
                                     <td>{{$rq->id}}</td>
                                     <td>{{$rq->name}}</td>
+                                    <td>{{$rq->email}}</td>
                                     <td>{{$rq->phone}}</td>
                                     <td>{{$rq->type}}</td>
 

@@ -21,6 +21,7 @@ class PropertiesRequestsController extends Controller
         $Form = PropertiesRequests::create([
             'name' => $request['name'],
             'phone' => $request['phone'],
+            'email' => $request['email'],
             'type' => $request['type'],
             'city' => $request['city'],
             'rooms' => $request['rooms'],

@@ -56,6 +56,14 @@
                                             <span class="text-danger">{{ $errors->first('name') }}</span>
                                             @endif
                                         </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                            <input class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" type="email" value="{{ old('email') }}" placeholder="* البريد الإلكتروني" required>
+                                            @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                            @endif
+                                        </div>
+
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <input class="form-control @if ($errors->has('phone')) is-invalid @endif" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="*  رقم الهاتف" required>
                                             @if ($errors->has('phone'))
