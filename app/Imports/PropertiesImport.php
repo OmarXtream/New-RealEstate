@@ -19,10 +19,10 @@ class PropertiesImport implements ToModel,WithHeadingRow
     public function model(array $row)
     {
 
-
+        
          $property = Property::firstOrCreate([
         'title' => $row['title'],
-        'slug' => str_slug($row['title']),
+        'slug' => str_slug($row['title']).rand(10,100),
         'price' => $row['price'],
         'purpose' => $row['purpose'],
         'type' => $row['type'],
@@ -37,7 +37,18 @@ class PropertiesImport implements ToModel,WithHeadingRow
         'description' => $row['description'],
         'video' => $row['video'],
         'floor_plan' => $row['floor_plan'],
-        ]);
+        'coordinate' => $row['coordinate'],
+        'floors' => $row['floors'],
+        'halls' => $row['halls'],
+        'entries' => $row['entries'],
+        'mroom' => $row['mroom'],
+        'droom' => $row['droom'],
+        'status' => $row['status'],
+        'parking' => $row['parking'],
+        'tank' => $row['tank'],
+        'sale' => $row['sale'],
+        'location' => $row['location'],
+    ]);
         $property->save();
         //upload multiple imgs
         $imgArray = explode(',', $row['imgs']);

@@ -20,7 +20,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('price');
             $table->boolean('featured')->default(false);
             $table->enum('purpose', ['بيع', 'ايجار']);
-            $table->enum('type', ['بيت', 'شقة','ملحق','عمارة']);
+            $table->enum('type', ['بيت', 'شقة','ملحق','عمارة','فلل']);
             $table->string('image')->nullable();
             $table->integer('bedroom');
             $table->integer('bathroom');
@@ -32,6 +32,22 @@ class CreatePropertiesTable extends Migration
             $table->text('description');
             $table->string('video')->nullable();
             $table->string('floor_plan')->nullable();
+
+            //for excel inserting
+            $table->string('coordinate')->nullable();
+            $table->integer('floors')->nullable();
+            $table->integer('halls')->nullable();
+            $table->integer('entries')->nullable();
+            $table->string('furnished')->nullable();
+            $table->string('mroom')->nullable();
+            $table->string('droom')->nullable();
+            $table->string('status')->nullable();
+            $table->string('parking')->nullable();
+            $table->string('tank')->nullable();
+            $table->string('sale')->nullable();
+            $table->string('location')->nullable();
+
+            
             // $table->string('location_latitude');
             // $table->string('location_longitude');
             // $table->text('nearby')->nullable();
