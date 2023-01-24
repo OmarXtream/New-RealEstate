@@ -237,6 +237,7 @@
     <script>
         $("#input-id").fileinput({
         'showUpload': false,
+         'showCancel': true,
         'language': 'ar',
         });
 
