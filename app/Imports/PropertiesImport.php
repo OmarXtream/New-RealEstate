@@ -18,11 +18,9 @@ class PropertiesImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-
-        
          $property = Property::firstOrCreate([
         'title' => $row['title'],
-        'slug' => str_slug($row['title']).rand(10,100),
+        'slug' => str_slug($row['title']),
         'price' => $row['price'],
         'purpose' => $row['purpose'],
         'type' => $row['type'],
@@ -41,6 +39,7 @@ class PropertiesImport implements ToModel,WithHeadingRow
         'floors' => $row['floors'],
         'halls' => $row['halls'],
         'entries' => $row['entries'],
+        'furnished' => $row['furnished'],
         'mroom' => $row['mroom'],
         'droom' => $row['droom'],
         'status' => $row['status'],
