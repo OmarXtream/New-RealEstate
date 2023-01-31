@@ -18,7 +18,9 @@ class PropertiesImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-         $property = Property::firstOrCreate([
+
+
+         $property = Property::updateOrCreate([
         'title' => $row['title'],
         'slug' => str_slug($row['title']),
         'price' => $row['price'],
