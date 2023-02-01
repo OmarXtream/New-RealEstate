@@ -28,15 +28,33 @@ class FeatureController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:features|max:255'
+            'name' => 'required|unique:features|max:255',
+            'icon' => 'required'
+
         ]);
 
+
+        $icon = $request->file('icon');
+        $slug  = str_slug($request->name);
         $tag = new Feature();
         $tag->name = $request->name;
+        if(isset($icon)){
+            $currentDate = Carbon::now()->toDateString();
+            $imagename = $slug.'-'.$currentDate.'-'.uniqid().'.'.$icon->getClientOriginalExtension();
+
+            if(!Storage::disk('public')->exists('features')){
+                Storage::disk('public')->makeDirectory('features');
+            }
+            Storage::disk('public')->put('features/'.$imagename, file_get_contents($icon));
+            $tag->icon = $imagename;
+
+        } 
+
+
+
         $tag->slug = str_slug($request->name);
         $tag->save();
-
-        Toastr::success('message', 'Feature created successfully.');
+        Toastr::success('message', 'تم الإنشاء بنجاح.');
         return redirect()->route('admin.features.index');
     }
 
