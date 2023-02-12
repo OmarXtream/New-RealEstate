@@ -111,7 +111,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     Route::get('userCreate','UsersController@userCreate')->name('userCreate');
     Route::post('userCreate','UsersController@createUser')->name('userCreate.send');
 
-
+    Route::post('postsIMG', 'PostController@upload')->name('posts.upload.image');
 });
 
 Route::group(['prefix'=>'agent','namespace'=>'Agent','middleware'=>['auth','agent'],'as'=>'agent.'], function(){

@@ -37,7 +37,7 @@
                     <hr>
                     <div class="form-group">
                         <label for="">المحتوى</label>
-                        <textarea name="body" id="tinymce">{{old('body')}}</textarea>
+                        <textarea name="body" id="summary-ckeditor">{{old('body')}}</textarea>
                     </div>
 
                 </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="body">
 
-                    <div class="form-group form-float">
+                    <div class="form-group form-float" dir="rtl">
                         <div class="form-line {{$errors->has('categories') ? 'focused error' : ''}}">
                             <label>اختر النوع</label>
                             <select name="categories[]" class="form-control show-tick" multiple data-live-search="true">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group form-float">
+                    <div class="form-group form-float" dir="rtl">
                         <div class="form-line {{$errors->has('tags') ? 'focused error' : ''}}">
                             <label>اختر الموضوع</label>
                             <select name="tags[]" class="form-control show-tick" multiple data-live-search="true">
@@ -100,8 +100,16 @@
 @push('scripts')
 
     <script src="{{ asset('backend/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
-    <script src="{{asset('backend/plugins/tinymce/tinymce.js')}}"></script>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
     <script>
+        CKEDITOR.replace( 'summary-ckeditor', {
+            filebrowserUploadUrl: "{{route('admin.posts.upload.image', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+    </script>    
+    {{-- <script src="{{asset('backend/plugins/tinymce/tinymce.js')}}"></script> --}}
+    {{-- <script>
         $(function () {
             tinymce.init({
                 selector: "textarea#tinymce",
@@ -120,6 +128,6 @@
             tinymce.suffix = ".min";
             tinyMCE.baseURL = '{{asset('backend/plugins/tinymce')}}';
         });
-    </script>
+    </script> --}}
 
 @endpush
