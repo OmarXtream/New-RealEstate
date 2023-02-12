@@ -46,7 +46,7 @@
             <div class="auto-container">
                 <div class="row align-items-center clearfix">
     
-                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column mb-5">
                         <div class="content-box">
                             <div class="sec-title" style="text-align: right">
                                 <h5>المعلومات الشخصية</h5>
