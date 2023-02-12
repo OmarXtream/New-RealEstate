@@ -23,7 +23,7 @@
                 <li class="{{ Request::is('admin/InfoForm') ? 'active' : '' }}">
                     <a href="{{ route('admin.InfoForm') }}">
                         <i class="material-icons">spa</i>
-                        <span>طلبات عقارية</span>
+                        <span>طلبات التمويل</span>
                     </a>
                 </li>
 
