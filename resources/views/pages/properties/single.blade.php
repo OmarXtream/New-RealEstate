@@ -305,7 +305,7 @@
                         @if($property->features)
                         <div class="discription-box content-widget">
                             <div class="title-box text-center">
-                                <h4>مميزات العقار</h4>
+                                <h4>خصائص العقار</h4>
                             </div>
                             <div class="text">
                                 <center>
