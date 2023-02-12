@@ -19,7 +19,7 @@ class CreatePropertiesMarkatingsTable extends Migration
             $table->string('name');
             $table->String('email');
 
-            $table->integer('phone');
+            $table->string('phone');
 
             $table->string('type')->nullable();
 

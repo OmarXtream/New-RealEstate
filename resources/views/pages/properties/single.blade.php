@@ -347,7 +347,7 @@
                         </div>
                         @endif
 
-                        <div class="discription-box content-widget">
+                        {{-- <div class="discription-box content-widget">
                             @if(Session::has('errors'))
                             <div class="text-center alert alert-light">
                               <h5 style="font-weight: bold;">فضلاً قم بملىء كل الحقول</h5>
@@ -409,8 +409,8 @@
                             @endforeach
 
                             </div>
-                        </div>
-                        @auth
+                        </div> --}}
+                        {{-- @auth
 
                         <div class="form-inner">
                             <form class="default-form" action="{{ route('property.comment',$property->id) }}" method="POST">
@@ -434,7 +434,7 @@
                             <h6 class="text-bold" style="color:#000">سجل الدخول لترك تعليق</h6>
                             </a>
                         </div>
-                    @endguest
+                    @endguest --}}
 
                     </div>
                 </div>
