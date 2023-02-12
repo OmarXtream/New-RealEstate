@@ -27,8 +27,8 @@
             <div class="col-lg-6 col-md-6 col-sm-12 content-column">
                 <div class="content-box">
                     <div class="sec-title" style="text-align: center">
-                        <h5>التواصل</h5>
-                        <h2>تواصل معنا</h2>
+                        <h3><i class="fa fa-handshake" aria-hidden="true"></i></h3>
+                        <h2>دعنا نتواصل معك </h2>
                     </div>
                     <div class="form-inner">
                         <form id="contact-us" action="" method="POST">
@@ -64,8 +64,8 @@
             <div class="col-lg-6 col-md-6 col-sm-12 content-column ">
                 <div class="content-box">
                     <div class="sec-title" style="text-align: center">
-                        <h5>التواصل</h5>
-                        <h2>حسابات التواصل</h2>
+                        <h5><i class="fa fa-lg fa-link"></i></h5>
+                        <h3>تواصل معنا على حساباتنا الرسمية</h3>
 
                     </div>
                         <div class="blog-sidebar" style="background-color:transparent !important">
@@ -76,7 +76,7 @@
                             <li><a href="https://www.instagram.com/roshemcompany/"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="https://www.twitter.com/roshemcompany/"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="https://www.snapchat.com/add/roshemcompany"><i class="fab fa-snapchat"></i></a></li>
-                            <li style="margin-right: 8px !important;"><a href="https://www.tiktok.com/@roshemcompany"><img width="50px" height="50px" src="https://d.top4top.io/p_2578y1a0p1.png"></a></li>
+                            <li style="margin-right: 12px !important;"><a href="https://www.tiktok.com/@roshemcompany"><img width="50px" height="50px" src="https://d.top4top.io/p_2578y1a0p1.png"></a></li>
                         </ul>
                         <h5 class="mt-2 text-center text-muted"> <br>   <i class="fa fa-phone"></i> 0531852852 <br> <i class="fa fa-phone"></i> 0531853853  </h5>
                     </div>
