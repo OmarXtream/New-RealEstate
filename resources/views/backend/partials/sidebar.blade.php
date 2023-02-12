@@ -13,6 +13,13 @@
                     </a>
                 </li>
 
+                <li class="{{ Request::is('admin/users') ? 'active' : '' }}">
+                    <a href="{{ route('admin.users.index') }}">
+                        <i class="material-icons">person</i>
+                        <span>المستخدمين</span>
+                    </a>
+                </li>
+
                 <li class="{{ Request::is('admin/InfoForm') ? 'active' : '' }}">
                     <a href="{{ route('admin.InfoForm') }}">
                         <i class="material-icons">spa</i>
