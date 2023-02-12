@@ -148,7 +148,7 @@
                         </div>
                     </div>
 
-                    <h5>Features</h5>
+                    <h5>خصائص عقارية</h5>
                     <div class="form-group demo-checkbox">
                         @foreach($features as $feature)
                             <input type="checkbox" id="features-{{$feature->id}}" name="features[]" class="filled-in chk-col-indigo" value="{{$feature->id}}" />

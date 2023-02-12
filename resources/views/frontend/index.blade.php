@@ -457,16 +457,15 @@
                             <h2> روشم للتطوير العقاري</h2>
                         </div>
                         <div class="row gx-5">
-                        <div class="col-lg-4 col-md-4 col-sm-12 p-3">
+                        <div class="col-lg-6 col-md-6 col-sm-12 p-3" style="padding-left: 80px !important;">
                             
                                     <h3><i class="fa fa-eye fa-lg"></i> الرؤية</h3>
                                     <p class="grey-text text-lighten-4 mt-2 text-justify">
                                         روشم للتطوير العقاري منذ تأسيسها أثرت روشم للتطوير العقاري السوق العقاري بممارسة عقارية فريدة أحدثت نقلة نوعية في سوق العقار المحلي من خلال تنفيذ وإنجاز المشاريع العملاقة فحازت بذلك على رضا عملائها وثقتهم من خلال نجاحها بتنفيذ وإنجاز العديد من المشاريع والاستثمارات العقارية الكبيرة داخل المملكة 
                                     </p>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 p-3"></div>
                         
-                    <div class="col-lg-4 col-md-4 col-sm-12 p-3">
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-3 pr-5" style="padding-right: 80px !important;">
 
                                     <h3><i class="fa fa-bullseye fa-lg"></i> الهدف</h3>
                                     <p class="grey-text text-lighten-4 mt-2 text-justify">

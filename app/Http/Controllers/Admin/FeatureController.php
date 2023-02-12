@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 use App\Feature;
 use Toastr;
-
+use Carbon\Carbon;
 class FeatureController extends Controller
 {
 
@@ -57,7 +58,7 @@ class FeatureController extends Controller
         Toastr::success('message', 'تم الإنشاء بنجاح.');
         return redirect()->route('admin.features.index');
     }
-
+    
 
     public function edit($id)
     {

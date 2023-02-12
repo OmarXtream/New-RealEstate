@@ -61,7 +61,7 @@
                 <li class="{{ Request::is('admin/features*') ? 'active' : '' }}">
                     <a href="{{ route('admin.features.index') }}">
                         <i class="material-icons">star</i>
-                        <span>الخصائص</span>
+                        <span>خصائص عقارية</span>
                     </a>
                 </li>
 

@@ -24,7 +24,7 @@
                     <h2>انشاء خاصية</h2>
                 </div>
                 <div class="body">
-                    <form action="{{route('admin.features.store')}}" method="POST">
+                    <form action="{{route('admin.features.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group form-float">
@@ -34,6 +34,10 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <input type="file" name="icon">
+                        </div>
+                        
                         <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                             <i class="material-icons">save</i>
                             <span>حفظ</span>

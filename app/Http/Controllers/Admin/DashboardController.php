@@ -18,6 +18,12 @@ use App\Comment;
 use App\Setting;
 use App\Message;
 use App\User;
+
+use App\PropertiesMarkating;
+use App\InfoForm;
+use App\PropertiesRequests;
+
+
 use Toastr;
 use Auth;
 use Hash;
@@ -30,7 +36,11 @@ class DashboardController extends Controller
         $postcount     = Post::count();
         $commentcount  = Comment::count();
         $usercount     = User::count();
-
+        $PropertiesMarkating     = PropertiesMarkating::count();
+        $InfoFormCount     = InfoForm::count();
+        $PropertiesRequestsCount     = PropertiesRequests::count();
+        $MessagesCount = Message::where('agent_id',Auth::user()->id)->count();
+        
         $properties    = Property::latest()->with('user')->take(5)->get();
         $posts         = Post::latest()->withCount('comments')->take(5)->get();
         $users         = User::with('role')->get();
@@ -38,7 +48,8 @@ class DashboardController extends Controller
 
         return view('admin.dashboard', compact(
             'propertycount', 'postcount', 'commentcount', 'usercount',
-            'properties',    'posts',     'users',        'comments'
+            'properties',    'posts',     'users',        'comments',
+            'PropertiesMarkating','InfoFormCount','PropertiesRequestsCount','MessagesCount'
         ));
     }
 
