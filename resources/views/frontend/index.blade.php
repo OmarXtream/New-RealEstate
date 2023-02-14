@@ -386,7 +386,7 @@
                     <div class="auto-container">
                         <div class="upper-box clearfix">
                             <div class="sec-title">
-                                <h5>مميزاتنا </h5>
+                                <h5>خدماتنا </h5>
                                 <h2>لماذا تختارنا؟</h2>
                             </div>
                         </div>
@@ -449,6 +449,10 @@
                         </div>
                     </div>
                 </section>
+
+
+
+        
                 <!-- chooseus-section end -->
                 <section class="deals-section sec-pad text-center">
                     <div class="auto-container">
@@ -475,6 +479,55 @@
                         </div>
                     </div>
 
+                    </div>
+                </section>
+
+
+                <section class="chooseus-section alternate-2 bg-color-1">
+                    <div class="auto-container">
+                        <div class="upper-box clearfix">
+                            <div class="sec-title">
+                                <h5>مميزاتنا</h5>
+                                <h2>بماذا نتميز؟</h2>
+                            </div>
+                        </div>
+                        <div class="lower-box">
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-25"></i></div>
+                                            <h4>تتميز عقارات روشم بالفخامة والتصاميم العصرية الأنيقة</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-26"></i></div>
+                                            <h4>لدينا فريق متميز من أكفأ الاستشاريين والمهندسين والمصممين والمقاولين</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-3"></i></div>
+                                            <h4>لدينا مجموعة كبيرة من الاختيارات المناسبة لجميع الأذواق</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                                    <div class="chooseus-block-one">
+                                        <div class="inner-box">
+                                            <div class="icon-box"><i class="icon-24"></i></div>
+                                            <h4>لدينا فريق على دراية عالية بكافة اجراءات التمويل العقاري لضمان حصولك على منزل أحلامك بأسرع وقت ممكن</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
         <!-- testimonial-style-two -->
