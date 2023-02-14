@@ -235,11 +235,13 @@
     <script src="{{asset('backend/plugins/tinymce/tinymce.js')}}"></script>
     <script>
         $("#input-id").fileinput({
-        'showUpload': false,
+         'showUpload': false,
          'showCancel': true,
-        'language': 'ar',
+         'showRemove': true
+
         });
 
+        
         $(function () {
             tinymce.init({
                 selector: "textarea#tinymce",
