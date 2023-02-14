@@ -128,21 +128,20 @@
                             <label>اختر الغرض</label>
                             <select name="purpose" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="بيع">بيع</option>
-                                <option value="ايجار">ايجار</option>
+                                <option value="بيع" @if(old('purpose') == 'بيع') selected @endif>بيع</option>
+                                <option value="ايجار" @if(old('purpose') == 'ايجار') selected @endif>ايجار</option>
                             </select>
                         </div>
                     </div>
-
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
                             <label>اختر النوع</label>
                             <select name="type" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="بيت">بيت</option>
-                                <option value="شقة">شقة</option>
-                                <option value="ملحق">ملحق</option>
-                                <option value="عمارة">عمارة</option>
+                                <option value="بيت" @if(old('type') == 'بيت') selected @endif>بيت</option>
+                                <option value="شقة" @if(old('type') == 'شقة') selected @endif>شقة</option>
+                                <option value="ملحق" @if(old('type') == 'ملحق') selected @endif>ملحق</option>
+                                <option value="عمارة" @if(old('type') == 'عمارة') selected @endif>عمارة</option>
 
                             </select>
                         </div>
