@@ -18,11 +18,11 @@ class PropertiesImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-
+        
 
          $property = Property::updateOrCreate([
         'title' => $row['title'],
-        'slug' => str_slug($row['title']),
+        'slug' => str_slug($row['title'].rand(10,100)),
         'price' => $row['price'],
         'purpose' => $row['purpose'],
         'type' => $row['type'],
