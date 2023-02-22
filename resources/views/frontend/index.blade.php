@@ -269,16 +269,14 @@
                                 @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
                                 <figure class="image"><img src="{{Storage::url('property/'.$property->image)}}" alt=""></figure>
                                 @else
-                                <figure class="image"><img src="{{asset('frontend/images/feature/feature-1.jpg')}}" alt=""></figure>
+                                <figure class="image"><img src="{{$property->image}}" alt="{{$property->title}}"></figure>
                                 @endif
 
                                 <span class="category">مميز</span>
                             </div>
                             <div class="lower-content">
                                 <div class="author-info clearfix">
-                                    <div class="author pull-left">
-                                        <figure class="author-thumb"><img src="{{Storage::url('users/'.$property->user->image)}}" alt=""></figure>
-                                     </div>
+                            
                                   
                                      <div class="buy-btn pull-right"><a href="{{ route('property.show',$property->slug) }}">{{ ucfirst($property->type) }} - {{ $property->purpose }}</a></div>
                                      <div class="title-text"><h4><a href="{{ route('property.show',$property->slug) }}">{{ str_limit( $property->title, 18 ) }}</a></h4></div>
@@ -338,7 +336,7 @@
                                 @if(Storage::disk('public')->exists('property/'.$Nproperty->image) && $Nproperty->image)
                                 <figure class="image"><img src="{{Storage::url('property/'.$Nproperty->image)}}" alt=""></figure>
                                 @else
-                                <figure class="image"><img src="{{asset('frontend/images/feature/feature-1.jpg')}}" alt=""></figure>
+                                <figure class="image"><img src="{{$property->image}}" alt="{{$property->title}}"></figure>
                                 @endif
 
                                 <div class="batch"><i class="icon-11"></i></div>
