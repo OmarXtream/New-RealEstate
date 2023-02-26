@@ -336,7 +336,7 @@
                                 @if(Storage::disk('public')->exists('property/'.$Nproperty->image) && $Nproperty->image)
                                 <figure class="image"><img src="{{Storage::url('property/'.$Nproperty->image)}}" alt=""></figure>
                                 @else
-                                <figure class="image"><img src="{{$property->image}}" alt="{{$property->title}}"></figure>
+                                <figure class="image"><img src="{{$Nproperty->image}}" alt="{{$Nproperty->title}}"></figure>
                                 @endif
 
                                 <div class="batch"><i class="icon-11"></i></div>
