@@ -57,14 +57,8 @@
     'https://sc-static.net/scevent.min.js');
     
     snaptr('init', '45df8bbb-952c-48c1-a8d1-6b9104d93da7', {
-    @auth
-    'user_email': '{{Auth::user()->email}}'
-    @endauth
+    'user_email': '  @auth {{Auth::user()->email}} @endauth'
 
-    @guest
-    'user_email': 'roshemcompany+@php echo(rand(1,1000));@endphp@gmail.com'
-
-    @endguest
     });
     
     snaptr('track', 'PAGE_VIEW');
