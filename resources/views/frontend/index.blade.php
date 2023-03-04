@@ -516,14 +516,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                                    <div class="chooseus-block-one">
-                                        <div class="inner-box">
-                                            <div class="icon-box"><i class="icon-24"></i></div>
-                                            <h4>لدينا فريق على دراية عالية بكافة اجراءات التمويل العقاري لضمان حصولك على منزل أحلامك بأسرع وقت ممكن</h4>
-                                        </div>
-                                    </div>
-                                </div>
+                            
                             </div>
                         </div>
                     </div>

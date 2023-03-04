@@ -20,12 +20,12 @@
                     </a>
                 </li>
 
-                <li class="{{ Request::is('admin/InfoForm') ? 'active' : '' }}">
+                {{-- <li class="{{ Request::is('admin/InfoForm') ? 'active' : '' }}">
                     <a href="{{ route('admin.InfoForm') }}">
                         <i class="material-icons">spa</i>
                         <span>طلبات التمويل</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="{{ Request::is('admin/sliders*') ? 'active' : '' }}">
                     <a href="{{ route('admin.sliders.index') }}">

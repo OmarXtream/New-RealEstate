@@ -26,9 +26,9 @@
                                             <a href="{{ route('PropertiesMarkating') }}" class="grey-text text-lighten-3">تسويق عقار</a>
                                         </li>
                     
-                                        <li class="uppercase {{ Request::is('InfoForm*') ? 'underline' : '' }}">
+                                        {{-- <li class="uppercase {{ Request::is('InfoForm*') ? 'underline' : '' }}">
                                             <a href="{{ route('InfoForm') }}" class="grey-text text-lighten-3">حلول تمويلية</a>
-                                        </li>
+                                        </li> --}}
 
                                         <li class="uppercase {{ Request::is('blog*') ? 'underline' : '' }}">
                                             <a href="{{ route('blog') }}" class="grey-text text-lighten-3">المدونة</a>
