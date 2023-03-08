@@ -340,9 +340,13 @@
                                 <h4>مقطع فيديو للعقار</h4>
                             </div>
                             <div class="text">
+                                <div class="embed-responsive embed-responsive-16by9">
+
                                 <center>
                                 {!! $videoembed !!}
                             </center>
+                        </div>
+
                             </div>
                         </div>
                         @endif
