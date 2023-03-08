@@ -22,7 +22,7 @@ class PropertiesImport implements ToModel,WithHeadingRow
 
          $property = Property::updateOrCreate([
         'title' => $row['title'],
-        'slug' => str_slug($row['title'].rand(10,100)),
+        'slug' => str_slug($row['title']),
         'price' => $row['price'],
         'purpose' => $row['purpose'],
         'type' => $row['type'],
