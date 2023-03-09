@@ -22,8 +22,8 @@ class CreatePropertiesTable extends Migration
             $table->enum('purpose', ['بيع', 'ايجار']);
             $table->string('type'); // ['بيت', 'شقة','ملحق','عمارة','فلل']
             $table->string('image')->nullable();
-            $table->integer('bedroom');
-            $table->integer('bathroom');
+            $table->integer('bedroom')->nullable();
+            $table->integer('bathroom')->nullable();
             $table->string('city');
             $table->string('city_slug');
             $table->string('address');
