@@ -29,7 +29,7 @@ class CreatePropertiesTable extends Migration
             $table->string('address');
             $table->string('area');
             $table->integer('agent_id');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('video')->nullable();
             $table->string('floor_plan')->nullable();
 

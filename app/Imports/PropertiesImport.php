@@ -79,7 +79,7 @@ class PropertiesImport implements ToModel,WithHeadingRow,WithValidation
 
         return [
             'title'     => 'required',
-            'purpose' => 'required|in:بيع,ايجار',
+            'purpose'   => 'required|in:بيع,ايجار',
             'price'     => 'required',
             'type'      => 'required',
             'bedroom'   => 'required',
@@ -87,7 +87,6 @@ class PropertiesImport implements ToModel,WithHeadingRow,WithValidation
             'city'      => 'required',
             'address'   => 'required',
             'area'      => 'required',
-            'description' => 'required',
 
         ];
     }
