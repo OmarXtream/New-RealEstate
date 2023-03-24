@@ -6,11 +6,12 @@ use App\Property;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithValidation;
+use Maatwebsite\Excel\Concerns\SkipsEmptyRows;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class PropertiesImport implements ToModel,WithHeadingRow,WithValidation
+class PropertiesImport implements ToModel,WithHeadingRow,WithValidation, SkipsEmptyRows
 {
     /**
     * @param array $row
