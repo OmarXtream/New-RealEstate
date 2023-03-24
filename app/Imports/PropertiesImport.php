@@ -5,11 +5,12 @@ namespace App\Imports;
 use App\Property;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\WithValidation;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class PropertiesImport implements ToModel,WithHeadingRow
+class PropertiesImport implements ToModel,WithHeadingRow,WithValidation
 {
     /**
     * @param array $row
@@ -71,5 +72,22 @@ class PropertiesImport implements ToModel,WithHeadingRow
 
         return $property;
 
+    }
+
+    public function rules(): array
+    {
+
+        return [
+            'title'     => 'required|max:255',
+            'price'     => 'required',
+            'purpose'   => 'required',
+            'type'      => 'required',
+            'bedroom'   => 'required',
+            'bathroom'  => 'required',
+            'city'      => 'required',
+            'address'   => 'required',
+            'area'      => 'required',
+
+        ];
     }
 }
