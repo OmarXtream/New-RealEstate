@@ -87,6 +87,7 @@ class PropertiesImport implements ToModel,WithHeadingRow,WithValidation
             'city'      => 'required',
             'address'   => 'required',
             'area'      => 'required',
+            'description'      => 'required',
 
         ];
     }
