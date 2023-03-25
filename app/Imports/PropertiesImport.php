@@ -3,16 +3,18 @@
 namespace App\Imports;
 
 use App\Property;
+
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithValidation;
-use Maatwebsite\Excel\Concerns\SkipsEmptyRows;
+
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class PropertiesImport implements ToModel,WithHeadingRow,WithValidation, SkipsEmptyRows
+class PropertiesImport implements ToModel,WithHeadingRow,WithValidation
 {
+
     /**
     * @param array $row
     *
@@ -20,8 +22,6 @@ class PropertiesImport implements ToModel,WithHeadingRow,WithValidation, SkipsEm
     */
     public function model(array $row)
     {
-        
-
          $property = Property::updateOrCreate([
         'title' => $row['title'],
         'slug' => str_slug($row['title']),
