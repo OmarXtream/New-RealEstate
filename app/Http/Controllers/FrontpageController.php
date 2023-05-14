@@ -15,8 +15,8 @@ class FrontpageController extends Controller
     public function index()
     {
         $sliders        = Slider::latest()->get();
-        $properties     = Property::where('featured',1)->with('rating')->withCount('comments')->take(6)->latest();
-        $Normalproperties = Property::with('rating')->withCount('comments')->take(6)->latest();
+        $properties     = Property::where('featured',1)->with('rating')->withCount('comments')->take(6)->latest()->get();
+        $Normalproperties = Property::with('rating')->withCount('comments')->take(6)->latest()->get();
 
         $services       = Service::orderBy('service_order')->get();
         $testimonials   = Testimonial::latest()->get();
