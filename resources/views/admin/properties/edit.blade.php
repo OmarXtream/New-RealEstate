@@ -144,13 +144,27 @@
                                 <option value="بيت" {{ $property->type=='بيت' ? 'selected' : '' }}>بيت</option>
                                 <option value="شقة" {{ $property->type=='شقة' ? 'selected' : '' }}>شقة</option>
                                 <option value="ملحق" {{ $property->type=='ملحق' ? 'selected' : '' }}>ملحق</option>
-                                <option value="عمارة" {{ $property->purpose=='عمارة' ? 'selected' : '' }}>عمارة</option>
+                                <option value="عمارة" {{ $property->type=='عمارة' ? 'selected' : '' }}>عمارة</option>
 
                             </select>
                         </div>
                     </div>
 
-                    <h5>Features</h5>
+                    <div class="form-group form-float">
+                        <div class="form-line {{$errors->has('status') ? 'focused error' : ''}}">
+                            <label>اختر الحالة</label>
+                            <select name="status" class="form-control show-tick">
+                                <option value="">-- اختر --</option>
+                                <option value="متاح" {{ $property->status== 'متاح' ? 'selected' : '' }}>متاح</option>
+                                <option value="محجوز" {{ $property->status== 'محجوز' ? 'selected' : '' }}>محجوز</option>
+                                <option value="مباع" {{ $property->status== 'مباع' ? 'selected' : '' }}>مباع</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <h5>الخصائص العقارية</h5>
                     <div class="form-group demo-checkbox">
                         @foreach($features as $feature)
                             <input type="checkbox" id="features-{{$feature->id}}" name="features[]" class="filled-in chk-col-indigo" value="{{$feature->id}}" 
