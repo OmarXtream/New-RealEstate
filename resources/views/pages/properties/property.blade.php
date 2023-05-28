@@ -63,6 +63,8 @@
                                             <div class="image-box">
                                                 <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{$property->image}}" alt="{{$property->title}}"></a>
                                                 <div class="batch"><i class="icon-11"></i></div>
+                                                <span class="category">{{$property->status}}</span>
+
                                             </div>
         
                                             @endif
