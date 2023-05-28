@@ -181,7 +181,7 @@
                     <div class="price-inner clearfix">
 
                         <ul class="category clearfix pull-left px-auto">
-                            <li class="float-right"><a href="#">{{ $property->purpose }}</a></li>
+                            <li class="float-right"><a href="#">{{ $property->purpose }} - {{ $property->status }}</a></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">التعليقات: {{ $property->comments_count }}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}}</span></li>

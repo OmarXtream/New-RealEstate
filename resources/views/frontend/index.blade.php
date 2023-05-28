@@ -273,6 +273,9 @@
                                 @endif
 
                                 <span class="category">مميز</span>
+                                <span class="category">{{$property->status}}</span>
+
+
                             </div>
                             <div class="lower-content">
                                 <div class="author-info clearfix">
@@ -340,7 +343,8 @@
                                 @endif
 
                                 <div class="batch"><i class="icon-11"></i></div>
-                                <span class="category">مميز</span>
+                                <span class="category">{{$Nproperty->status}}</span>
+
                             </div>
                             <div class="lower-content">
                                 <div class="author-info clearfix">
